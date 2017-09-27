@@ -7,39 +7,67 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите размер массива: ");
-        int a = scanner.nextInt();
-        int b[] = new int[a];
-        int c = 0;
+        int arraySize = scanner.nextInt();
+        int array[] = new int[arraySize];
+        int i = 0;
         System.out.println("Введите значение элементов массива: ");
-        for (c = 0; c < a; c++) {
-            b[c] = scanner.nextInt();
+        for (i = 0; i < arraySize; i++) {
+            array[i] = scanner.nextInt();
         }
-        int e = 0;
-        int f = 0;
-        int g = 0;
-        int h = 0;
-
+        int sumEven = 0;
+        int sumUneven = 0;
+        int sumEvenPos = 0;
+        int sumUnevenPos = 0;
+        int maxPos = 0;
         System.out.println("Ваш массив: ");
-        for (c = 0; c < a; c++) {
-            System.out.println("[" + c + "] = " + b[c]);
+        for (i = 0; i < arraySize; i++) {
+            System.out.println("[" + i + "] = " + array[i]);
 
-            int d = b[c] % 2;
+            int d = array[i] % 2;
             if (d == 0) {
-                e = e + b[c];
+                sumEven = sumEven + array[i];
             } else {
-                f = f + b[c];
+                sumUneven = sumUneven + array[i];
             }
-            d = c % 2;
+            d = i % 2;
             if (d == 0) {
-                g = g + b[c];
+                sumEvenPos = sumEvenPos + array[i];
             } else {
-                h = h + b[c];
+                sumUnevenPos = sumUnevenPos + array[i];
             }
         }
-        System.out.println("Сумма четных элементов равна: " + e);
-        System.out.println("Сумма нечетных элементов равна: " + f);
-        System.out.println("Сумма элементов, стоящих на четных позициях равна: " + g);
-        System.out.println("Сумма элементов, стоящих на нечетных позициях равна: " + h);
+        int localMax = 0;
+        for (i = 1; i < (arraySize - 1); i++) {
+            if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
+                localMax = localMax + 1;
+            }
+        }
+        int count = 1;
+        for (i = 0; i < array.length - 1; i++) {
+            if (array[i] < array[i + 1]) {
+                count++;
+            }
+            if (array[i] >= array[i + 1] && count > maxPos) {
+                maxPos = count;
+                count = 1;
+            }
+        }
+        if (count > maxPos) {
+            maxPos = count;
+        }
 
+        System.out.println("1. Сумма четных элементов равна: " + sumEven);
+        System.out.println("2. Сумма нечетных элементов равна: " + sumUneven);
+        System.out.println("3. Сумма элементов, стоящих на четных позициях равна: " + sumEvenPos);
+        System.out.println("4. Сумма элементов, стоящих на нечетных позициях равна: " + sumUnevenPos);
+        System.out.println("5. Количество локальных максимумов: " + localMax);
+        System.out.println("6. Максимальная длина подпоследовательности из возрастающих чисел: " + maxPos);
+        System.out.print("7. Замена нулей отрицательным числом: ");
+        for (i = 0; i < array.length; i++) {
+            if (array[i] == 0) {
+                array[i] = array[i + 1] * -1;
+            }
+            System.out.print(array[i] + " ");
+        }
     }
 }
