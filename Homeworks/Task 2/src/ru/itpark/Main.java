@@ -1,73 +1,47 @@
 package ru.itpark;
 
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите размер массива: ");
-        int arraySize = scanner.nextInt();
-        int array[] = new int[arraySize];
-        int i = 0;
-        System.out.println("Введите значение элементов массива: ");
-        for (i = 0; i < arraySize; i++) {
-            array[i] = scanner.nextInt();
-        }
-        int sumEven = 0;
-        int sumUneven = 0;
-        int sumEvenPos = 0;
-        int sumUnevenPos = 0;
-        int maxPos = 0;
-        System.out.println("Ваш массив: ");
-        for (i = 0; i < arraySize; i++) {
-            System.out.println("[" + i + "] = " + array[i]);
-
-            int d = array[i] % 2;
-            if (d == 0) {
-                sumEven = sumEven + array[i];
-            } else {
-                sumUneven = sumUneven + array[i];
-            }
-            d = i % 2;
-            if (d == 0) {
-                sumEvenPos = sumEvenPos + array[i];
-            } else {
-                sumUnevenPos = sumUnevenPos + array[i];
-            }
-        }
-        int localMax = 0;
-        for (i = 1; i < (arraySize - 1); i++) {
-            if (array[i] > array[i - 1] && array[i] > array[i + 1]) {
-                localMax = localMax + 1;
-            }
-        }
-        int count = 1;
-        for (i = 0; i < array.length - 1; i++) {
-            if (array[i] < array[i + 1]) {
-                count++;
-            }
-            if (array[i] >= array[i + 1] && count > maxPos) {
-                maxPos = count;
-                count = 1;
-            }
-        }
-        if (count > maxPos) {
-            maxPos = count;
-        }
-
-        System.out.println("1. Сумма четных элементов равна: " + sumEven);
-        System.out.println("2. Сумма нечетных элементов равна: " + sumUneven);
-        System.out.println("3. Сумма элементов, стоящих на четных позициях равна: " + sumEvenPos);
-        System.out.println("4. Сумма элементов, стоящих на нечетных позициях равна: " + sumUnevenPos);
-        System.out.println("5. Количество локальных максимумов: " + localMax);
-        System.out.println("6. Максимальная длина подпоследовательности из возрастающих чисел: " + maxPos);
-        System.out.print("7. Замена нулей отрицательным числом: ");
-        for (i = 0; i < array.length; i++) {
-            if (array[i] == 0) {
-                array[i] = array[i + 1] * -1;
-            }
-            System.out.print(array[i] + " ");
+        // write your code here
+        int a = 1;
+        int b = 1000;
+        int random_number1 = a + (int) (Math.random() * b);
+        int random_number2 = a + (int) (Math.random() * b);
+        int random_number3 = a + (int) (Math.random() * b);
+        int random_number4 = a + (int) (Math.random() * b);
+        System.out.println("Ваши случайные числа: ");
+        System.out.println(random_number1);
+        System.out.println(random_number2);
+        System.out.println(random_number3);
+        System.out.println(random_number4);
+        int c = 1;
+        int d = 4;
+        int random_delete = c + (int) (Math.random() * d);
+        if (random_delete == 1) {
+            System.out.println("Ваше первое число: " + random_number1 + " удалено");
+            System.out.println("У вас остались числа: ");
+            System.out.println(random_number2);
+            System.out.println(random_number3);
+            System.out.println(random_number4);
+        } else if (random_delete == 2) {
+            System.out.println("Ваше второе число: " + random_number2 + " удалено");
+            System.out.println("У вас остались числа: ");
+            System.out.println(random_number1);
+            System.out.println(random_number3);
+            System.out.println(random_number4);
+        } else if (random_delete == 3) {
+            System.out.println("Ваше третье число: " + random_number3 + " удалено");
+            System.out.println("У вас остались числа:");
+            System.out.println(random_number1);
+            System.out.println(random_number2);
+            System.out.println(random_number4);
+        } else {
+            System.out.println("Ваше четвертое число: " + random_number4 + " удалено");
+            System.out.println("У вас остались числа:");
+            System.out.println(random_number1);
+            System.out.println(random_number2);
+            System.out.println(random_number3);
         }
     }
 }
