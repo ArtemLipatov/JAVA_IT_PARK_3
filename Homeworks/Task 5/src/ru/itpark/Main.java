@@ -39,7 +39,7 @@ public class Main {
                     }
                     System.out.println("Введите строку: ");
                     String newDoc = scanner.next();
-                    DocumentUtil.addLineToEnd(document, newDoc);
+                    Documents.addDocToEnd(documentList, newDoc);
                 }
                 break;
                 case 4: {
@@ -65,7 +65,7 @@ public class Main {
                 case 7: {
                     System.out.println("Введите номер документа: ");
                     String DocPos = scanner.next();
-                    Documents.WorkInDoc(documentList[DocPos]);
+                    Documents.WorkInDoc(document, DocPos);
                 }
                 case 8:
                     System.exit(0);

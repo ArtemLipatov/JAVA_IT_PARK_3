@@ -48,7 +48,7 @@ public class Documents {
         count++;
     }
 
-    public static void WorkInDoc(String document[]) {
+    public static void WorkInDoc(String document[], String DocPos) {
         document[count] = DocPos;
         Scanner scanner = new Scanner(System.in);
         while (true) {
