@@ -6,70 +6,43 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        String document[] = new String[3];
-        String documentList[] = new String[4];
-        // Обеспечить функционал:
-        // добавить строку в конец, в начало, в заданную
-        // позицию, заменить строку, удалить строку, вывести весь документ
+        System.out.println("Введите количество документов: ");
         Scanner scanner = new Scanner(System.in);
+        int size = scanner.nextInt();
+        DocumentUtil Documents[] = new DocumentUtil[size];
+        DocumentUtil document[] = new DocumentUtil[size];
+
         while (true) {
-            Menu.MainMenu();
+
+            Menu.showMenu();
 
             int command = scanner.nextInt();
 
             switch (command) {
                 case 1: {
-                    Documents.showDocumentsList(documentList);
+                    Menu.showDocuments(Documents);
                 }
                 break;
                 case 2: {
-                    if (Documents.count == documentList.length) {
-                        System.err.println("Нет места");
-                        break;
-                    }
-                    System.out.println("Введите строку: ");
-                    String newDoc = scanner.next();
-                    Documents.addDocToBegin(documentList, newDoc);
+                    Menu.addDocument(Documents, document);
                 }
                 break;
                 case 3: {
-                    if (Documents.count == documentList.length) {
-                        System.err.println("Нет места");
-                        break;
-                    }
-                    System.out.println("Введите строку: ");
-                    String newDoc = scanner.next();
-                    Documents.addDocToEnd(documentList, newDoc);
+                    System.out.println("Выберите номер документа: ");
+                    int docDelete = scanner.nextInt();
+                    Menu.deleteDocument(Documents, docDelete);
                 }
                 break;
                 case 4: {
-                    System.out.println("Введите строку: ");
-                    int pos = scanner.nextInt();
-                    Documents.delDoc(documentList, pos);
-                }
-                break;
-                case 5: {
-                    System.out.println("Введите номер строки для замены: ");
-                    int pos = scanner.nextInt();
-                    System.out.println("Введите номер строки для замены: ");
-                    int pos1 = scanner.nextInt();
-                    Documents.swapDoc(documentList, pos, pos1);
-                }
-                break;
-                case 6: {
-                    System.out.println("Введите строку: ");
-                    int pos = scanner.nextInt();
-                    Documents.clearDoc(documentList, pos);
-                }
-                break;
-                case 7: {
                     System.out.println("Введите номер документа: ");
-                    String DocPos = scanner.next();
-                    Documents.WorkInDoc(document, DocPos);
+                    int number = scanner.nextInt();
+                    MainMenuForDocuments.menuDocuments(Documents[number]);
                 }
-                case 8:
+                break;
+                case 5:
                     System.exit(0);
             }
         }
+
     }
 }

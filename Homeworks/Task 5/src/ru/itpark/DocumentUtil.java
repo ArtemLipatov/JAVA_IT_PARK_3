@@ -1,45 +1,53 @@
 package ru.itpark;
 
 public class DocumentUtil {
-    static int count = 0;
+    int count = 0;
+    String lines[] = new String[5];
 
-    public static void showDocument(String document[]) {
-        for (int i = 0; i < document.length; i++) {
+    void showMenu() {
+        System.out.println("МЕНЮ:");
+        System.out.println("1. Показать документ");
+        System.out.println("2. Вставить строку в начало");
+        System.out.println("3. Вставить строку в конец");
+        System.out.println("4. Удалить строку");
+        System.out.println("5. Заменить строку");
+        System.out.println("6. Очистить строку");
+        System.out.println("7. Вернутся в главное меню");
+    }
+
+    void showDocument() {
+        for (int i = 0; i < lines.length; i++) {
             // тернарный условный оператор e ? a : b
-            String lineToOut = document[i] == null ? "_______" : document[i];
+            String lineToOut = lines[i] == null ? "_______" : lines[i];
             System.out.println(i + ": " + lineToOut);
         }
     }
 
-    public static void addLineToBegin(String document[], String newLine) {
+    void addLineToBegin(String newLine) {
         for (int i = count; i > 0; i--) {
-            document[i] = document[i - 1];
+            lines[i] = lines[i - 1];
         }
-        document[0] = newLine;
+        lines[0] = newLine;
         count++;
     }
 
-    public static void addLineToEnd(String document[], String newLine) {
-        document[count] = newLine;
+    void addLineToEnd(String newLine) {
+        lines[count] = newLine;
         count++;
     }
 
-    public static void delLine(String document[], int pos) {
-        pos = pos - 1;
-        for (int i = 0; i < document.length - pos - 1; i++) {
-            document[pos + i] = document[pos + i + 1];
+    void deleteLine(int delete, int length) {
+        for (int i = delete; i < length - 1; i++) {
+            lines[i] = lines[i + 1];
         }
-        document[document.length - 1] = null;
+        lines[lines.length - 1] = null;
+        count--;
     }
 
-    public static void swapLine(String document[], int pos, int pos1) {
-        document[pos] = document[pos1];
-        count++;
+    void removeLine(int remove, String newLine){lines[remove] = newLine;
     }
 
-    public static void clearLine(String document[], int pos) {
-        pos = pos - 1;
-        document[pos] = null;
-        count++;
+    void clearLine(int clear){lines[clear] = null;
     }
+
 }
