@@ -1,5 +1,12 @@
 package ru.itpark;
 
 public class RemoteController {
-    private TV tv;
+
+    public static void control() {
+        Singleton tv = Singleton.getTv();
+        while (true) {
+            TV.showMenu();
+            TV.remote(tv);
+        }
+    }
 }
