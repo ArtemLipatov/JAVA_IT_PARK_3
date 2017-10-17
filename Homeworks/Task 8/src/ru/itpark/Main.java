@@ -16,8 +16,13 @@ public class Main {
         System.out.println("Разница в росте равна: " + heightCompare.compare(a,b));
         System.out.println("Разница в весе равна: " +  weigthCompare.compare(a,b));
 
-        for (int i = 0; i < humans.length; i++){
+        HumanComparator comparator = new AgeHumanComparator();
+        HumanSorter sorter = new HumanSorterBubble();
 
+        sorter.sort(comparator, humans);
+
+        for (Human human : humans) {
+            System.out.println(human);
         }
     }
 }
