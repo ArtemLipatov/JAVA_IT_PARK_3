@@ -1,8 +1,10 @@
-package ru.itpark;
+package ru.itpark.lists;
 
 public class ArrayList implements List {
+    private Node head;
     private int count = 0;
     int[] array = new int[6];
+
 
     @Override
     public void add(int a) {
@@ -49,6 +51,57 @@ public class ArrayList implements List {
     public void returnIterator(Iterator iterator) {
         while (iterator.hasNext(array)) {
             System.out.println(iterator.next(array, iterator));;
+        }
+    }
+
+    @Override
+    public void addToBegin(int a) {
+        for (int i = 0; i < array.length; i++) {
+            if (count < array.length) {
+                array[i] = a;
+                count++;
+            } else {
+                System.out.println("Список полон");
+            }
+        }
+
+
+    }
+
+    @Override
+    public void addToEnd(int a) {
+        for (int i = 0; i < array.length; i++) {
+            if (count < array.length) {
+                array[array.length] = a;
+                count++;
+            } else {
+                System.out.println("Список полон");
+            }
+        }
+
+
+    }
+
+    @Override
+    public void getAmountElements() {
+        System.out.println(array.length);
+    }
+
+    @Override
+    public void reverse(int elements) {
+        for (int i = 0; i < array.length; i++ ){
+            array[i] = array.length - i;
+            count++;
+        }
+    }
+
+    private static class Node {
+        private int value;
+        private Node next;
+
+        Node(int value) {
+            this.value = value;
+            this.next = null;
         }
     }
 }

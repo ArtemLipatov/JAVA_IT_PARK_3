@@ -1,4 +1,6 @@
-package ru.itpark;
+package ru.itpark.lists;
+
+import ru.itpark.lists.Iterator;
 
 public class ArrayIterator implements Iterator {
     private int count = 0;

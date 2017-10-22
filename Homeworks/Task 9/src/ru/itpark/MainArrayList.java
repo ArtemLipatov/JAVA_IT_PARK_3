@@ -1,8 +1,14 @@
 package ru.itpark;
 
+import ru.itpark.lists.ArrayIterator;
+import ru.itpark.lists.ArrayList;
+import ru.itpark.lists.Iterator;
+import ru.itpark.lists.List;
+
+
 import java.util.Scanner;
 
-public class Main {
+public class MainArrayList {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
