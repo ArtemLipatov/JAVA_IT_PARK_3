@@ -1,12 +1,9 @@
 package com.company;
 
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 
 public class Main {
-    public static void printList (StringList list) {
+    public static void printList(StringList list) {
         StringIterator iterator = list.iterator();
 
         if (iterator.hasNext()) {
@@ -25,17 +22,12 @@ public class Main {
             age[i] = new LinkedList();
         }
         String word = reader.readString();
-
         int number = numbersReader.readInteger();
-
         age[number].addToBegin(word);
 
         while (number != 0) {
-
             word = reader.readString();
-
             number = numbersReader.readInteger();
-
             age[number].addToBegin(word);
 
         }
@@ -46,9 +38,5 @@ public class Main {
             printList(age[i]);
             System.out.print("\n");
         }
-
-
-
     }
-
 }
