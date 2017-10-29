@@ -1,6 +1,6 @@
-package ru.itpark.lists;
+package com.company;
 
-public class LinkedList implements List {
+public class LinkedList implements StringList {
 
     private Node head;
     private int count;
@@ -10,7 +10,7 @@ public class LinkedList implements List {
         this.count = 0;
     }
 
-    public void addToBegin(int element) {
+    public void addToBegin(String element) {
         // создали узел для элемента
         Node newNode = new Node(element);
 
@@ -23,7 +23,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public void addToEnd(int element) {
+    public void addToEnd(String element) {
         Node newNode = new Node(element);
         Node lastNode = null;
         LinkedListIterator iterator = new LinkedListIterator();
@@ -43,7 +43,7 @@ public class LinkedList implements List {
             iterator.next();
             a++;
         }
-        System.out.println("В списке " + a + " элементов");
+        System.out.print(a);
     }
 
     @Override
@@ -61,7 +61,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public void addByIndex(int element, int index) {
+    public void addByIndex(String element, int index) {
         Node newNode = new Node(element);
         Node current = head;
         Node next = current.next;
@@ -119,11 +119,11 @@ public class LinkedList implements List {
     }
 
     @Override
-    public Iterator iterator() {
+    public StringIterator iterator() {
         return new LinkedListIterator();
     }
 
-    private class LinkedListIterator implements Iterator {
+    private class LinkedListIterator implements StringIterator {
 
         private Node currentNode;
 
@@ -132,8 +132,8 @@ public class LinkedList implements List {
         }
 
         @Override
-        public int next() {
-            int element =  currentNode.value;
+        public String next() {
+            String element = currentNode.value;
             currentNode = currentNode.next;
             return element;
         }
@@ -144,13 +144,16 @@ public class LinkedList implements List {
         }
     }
 
+
+
     private static class Node {
-        private int value;
+        private String value;
         private Node next;
 
-        Node(int value) {
+        Node(String value) {
             this.value = value;
             this.next = null;
         }
     }
+
 }

@@ -1,6 +1,4 @@
-package ru.itpark.lists;
-
-import ru.itpark.lists.Iterator;
+package com.company;
 
 public interface List {
     void addToBegin(int element);

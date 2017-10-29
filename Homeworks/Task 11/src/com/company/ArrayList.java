@@ -1,4 +1,4 @@
-package ru.itpark.lists;
+package com.company;
 
 public class ArrayList implements List {
     private static final int MAX_SIZE = 10;
@@ -57,6 +57,10 @@ public class ArrayList implements List {
         }
     }
 
+    public void insertByIndex(int element, int index) {
+        elements[index] = element;
+    }
+
     @Override
     public void reverse() {
         for (int i = 0; i < count / 2; i++) {
@@ -68,7 +72,7 @@ public class ArrayList implements List {
 
     @Override
     public void deleteByIndex(int index) {
-        if (count != 0){
+        if (count != 0) {
             for (int i = index; i < count; i++) {
                 elements[i] = elements[i + 1];
             }
@@ -81,7 +85,7 @@ public class ArrayList implements List {
 
     @Override
     public void deleteLast() {
-        if (count != 0){
+        if (count != 0) {
             elements[count] = 0;
             count--;
         } else {

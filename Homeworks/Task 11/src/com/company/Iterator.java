@@ -1,4 +1,4 @@
-package ru.itpark.lists;
+package com.company;
 
 public interface Iterator {
     int next();
