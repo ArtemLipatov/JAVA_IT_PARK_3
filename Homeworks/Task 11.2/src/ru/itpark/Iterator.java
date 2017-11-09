@@ -1,6 +1,6 @@
 package ru.itpark;
 
 public interface Iterator {
-    String next();
+    Object next();
     boolean hasNext();
 }

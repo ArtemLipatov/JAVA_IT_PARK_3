@@ -4,42 +4,40 @@ import java.io.IOException;
 
 public class Main {
 
-    private static int parse(char[] chars) {
-        int sum = 0;
-        int t = 1;
-        for (int i = chars.length - 1; i >= 0; i--) {
-            if (chars[i] >= '0' && chars[i] <= '9') {
-                sum = sum + (chars[i] - '0') * t;
-                t *= 10;
+    public static void printList(List list) {
+        Iterator iterator = list.iterator();
+
+        if (iterator.hasNext()) {
+            while (iterator.hasNext()) {
+                System.out.print(iterator.next() + " ");
             }
         }
-        return sum;
     }
 
     public static void main(String[] args) throws IOException {
+
         DataReader reader = new DataReader("names and ages.txt");
-        LinkedList[] array = new LinkedList[100];
-
-        for (int i = 0; i < array.length; i++) {
-            LinkedList list = new LinkedList();
-            array[i] = list;
+        DataReader numbersReader = new DataReader("names and ages.txt");
+        LinkedList age[] = new LinkedList[101];
+        for (int i = 0; i < age.length; i++) {
+            age[i] = new LinkedList();
         }
-
         String word = reader.readString();
-        while (word.length() > 0) {
-            char[] chars = word.toCharArray();
-            int age = parse(chars);
-            array[age].add(word);
+        int number = numbersReader.readInteger();
+        age[number].addToBegin(word);
+        while (number != 0) {
             word = reader.readString();
+            number = numbersReader.readInteger();
+            age[number].addToBegin(word);
+        }
+        for (int i = 0; i < age.length; i++) {
+            age[i].addToBegin(String.valueOf(i));
+
+        }
+        for (int i = 0; i < age.length; i++) {
+            printList(age[i]);
+            System.out.print("\n");
         }
 
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(i + ": ");
-            Iterator iterator = array[i].iterator();
-            while (iterator.hasNext()) {
-                System.out.print(iterator.next()  +  " -> ");
-            }
-            System.out.println();
-        }
     }
 }
