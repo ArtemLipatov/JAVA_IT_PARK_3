@@ -1,11 +1,10 @@
 package com.company;
 
-import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             Menu.mainMenu();
@@ -24,7 +23,7 @@ public class Main {
                 }
                 break;
                 case 4: {
-                    Show.showCars();
+                    Show.showAllCars();
                 }
                 break;
                 case 5: {
@@ -37,6 +36,12 @@ public class Main {
                 }
                 break;
                 case 7: {
+                    Show.showCarsWithOwners();
+                }
+//                case 8: {
+//                    Show.showWhiteCars();
+//                }
+                case 8: {
                     System.exit(0);
                 }
             }

@@ -8,6 +8,9 @@ public class Menu {
         System.out.println("4. Показать все машины");
         System.out.println("5. Показать всех владельцев без маниш");
         System.out.println("6. Показать все машины без владельцев");
-        System.out.println("7. Выход");
+        System.out.println("7. Показать все машины с владельцами");
+//        System.out.println("8. Показать все машины белого цвета");
+        System.out.println("8. Выход");
+
     }
 }
