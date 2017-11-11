@@ -6,42 +6,44 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Show show = new Show();
+        Add add = new Add();
         while (true) {
             Menu.mainMenu();
             int command = scanner.nextInt();
             switch (command) {
                 case 1: {
-                    Add.addHuman();
+                    add.addHuman();
                 }
                 break;
                 case 2: {
-                    Add.addCar();
+                    add.addCar();
                 }
                 break;
                 case 3: {
-                    Show.showHumans();
+                    show.showHumans();
                 }
                 break;
                 case 4: {
-                    Show.showAllCars();
+                    show.showAllCars();
                 }
                 break;
                 case 5: {
-                    Show.showOwnersWithoutCars();
+                    show.showOwnersWithoutCars();
 
                 }
                 break;
                 case 6: {
-                    Show.showCarsWithoutOwnrs();
+                    show.showCarsWithoutOwnrs();
                 }
                 break;
                 case 7: {
-                    Show.showCarsWithOwners();
+                    show.showCarsWithOwners();
                 }
-//                case 8: {
-//                    Show.showWhiteCars();
-//                }
                 case 8: {
+                    show.showWhiteCars();
+                }
+                case 9: {
                     System.exit(0);
                 }
             }

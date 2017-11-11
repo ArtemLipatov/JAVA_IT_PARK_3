@@ -3,7 +3,7 @@ package com.company;
 import java.sql.*;
 
 public class Show {
-    public static void showHumans() {
+    public  void showHumans() {
         try {
 
 
@@ -22,7 +22,7 @@ public class Show {
         }
     }
 
-    public static void showAllCars() {
+    public  void showAllCars() {
         try {
 
 
@@ -40,7 +40,7 @@ public class Show {
         }
     }
 
-    public static void showCarsWithOwners() {
+    public  void showCarsWithOwners() {
         try {
 
 
@@ -59,7 +59,7 @@ public class Show {
 
     }
 
-    public static void showOwnersWithoutCars() {
+    public  void showOwnersWithoutCars() {
         try {
 
 
@@ -76,7 +76,7 @@ public class Show {
         }
     }
 
-    public static void showCarsWithoutOwnrs() {
+    public  void showCarsWithoutOwnrs() {
         try {
 
 
@@ -94,13 +94,13 @@ public class Show {
         }
     }
 
-  /*  public static void showWhiteCars() {
+    public  void showWhiteCars() {
         try {
             Connection connection = Settings.connect();
             Statement statement = connection.createStatement();
 
             ResultSet resultSet = statement.
-                    executeQuery("SELECT * FROM car WHERE color = "White" ; ");
+                    executeQuery("SELECT * FROM car WHERE color = 'White' ; ");
             while (resultSet.next()) {
                 System.out.println(resultSet.getInt("id") + ") " + resultSet.getString("model") + ", цвет: "
                         + resultSet.getString("color") + ", номер: " + resultSet.getInt("number"));
@@ -108,6 +108,6 @@ public class Show {
         } catch (SQLException e) {
             throw new IllegalArgumentException(e);
         }
-    }*/
+    }
 }
 

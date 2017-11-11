@@ -4,7 +4,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class Add {
-    public static void addHuman() {
+    public  void addHuman() {
         try {
             Connection connection = Settings.connect();
             Statement statement = connection.createStatement();
@@ -33,7 +33,7 @@ public class Add {
 
     }
 
-    public static void addCar() {
+    public  void addCar() {
         try {
 
             Connection connection = Settings.connect();
