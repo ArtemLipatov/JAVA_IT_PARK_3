@@ -22,8 +22,8 @@ public class Main {
         Human avraam = new Human(8, 180, 75, "Авраам");
         Car ford = new Car(8, 333, "Black", "Opel", 5);
 
-//        carDao.save(ford);
-//        humansDao.save(avraam);
+        carDao.save(ford);
+        humansDao.save(avraam);
 
     }
 }
