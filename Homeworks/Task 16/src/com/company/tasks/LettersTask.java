@@ -13,9 +13,9 @@ public class LettersTask extends Thread  {
     public void LettersAsChar() {
 
         for (int i = 0; i < textViewer.getText().length(); i++) {
-            int currentByte = textViewer.getText().charAt(i);
-            if (currentByte >= 'A' && currentByte <= 'Z' || currentByte >= 'a' && currentByte <= 'z') {
-                System.out.println("Letter is:" + (char) currentByte);
+            char symbol = textViewer.getText().charAt(i);
+            if (Character.isLetter(symbol)) {
+                System.out.println("Letter is:" + +symbol);
             }
         }
     }

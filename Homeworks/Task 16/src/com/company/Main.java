@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         TextViewer viewer = new TextViewer();
-        viewer.setText("Hello, How are you. 123");
+        viewer.setText("Hello, How are you. 123 АБВ");
         viewer.addTask(new LettersTask(viewer));
         viewer.addTask(new DigitsTask(viewer));
         viewer.addTask(new PmTask(viewer));

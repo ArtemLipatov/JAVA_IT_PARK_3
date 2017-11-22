@@ -10,12 +10,14 @@ public class DigitsTask extends Thread {
 
     public void DigitsAsChar() {
         for (int i = 0; i < textViewer.getText().length(); i++) {
-            int currentByte = textViewer.getText().charAt(i);
-            if (currentByte >= '0' && currentByte <= '9') {
-                System.out.println("Digits is:" + (char) currentByte);
+            char symbol = textViewer.getText().charAt(i);
+            if (Character.isDigit(symbol)) {
+                System.out.println("Digits is:" + +symbol);
             }
         }
+
     }
+
 
     @Override
     public void run() {
