@@ -47,6 +47,6 @@ public class ProductUpdateJspServlet extends HttpServlet {
                 .build();
 
         productsRepository.update(product);
-        resp.sendRedirect("/productSave");
+        resp.sendRedirect("/products");
     }
 }

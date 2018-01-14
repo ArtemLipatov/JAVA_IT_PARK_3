@@ -29,6 +29,6 @@ public class ProductDeleteJspServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if ((req.getParameter("confirm")).equals(new String("yes")))
             productsRepository.delete(Long.parseLong(req.getParameter("id")));
-        resp.sendRedirect("/productSave");
+        resp.sendRedirect("/products");
     }
 }

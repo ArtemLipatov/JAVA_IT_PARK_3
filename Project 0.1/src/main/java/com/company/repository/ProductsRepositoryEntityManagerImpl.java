@@ -8,18 +8,25 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.sql.DataSource;
+import java.sql.SQLException;
 import java.util.List;
 
-@Component(value = "productsRepository")
+//@Component(value = "productsRepository")
 public class ProductsRepositoryEntityManagerImpl implements ProductsRepository {
 
     private EntityManager entityManager;
     private JdbcTemplate template;
 
+    //language=SQL
+    private static final String SQL_SELECT_ALL_PRODUCTS = "SELECT * FROM product";
+
     public ProductsRepositoryEntityManagerImpl(@Qualifier("hikariDataSource") DataSource dataSource) {
-        this.entityManager = entityManager;
+        JdbcTemplate template;
     }
 
+    public ProductsRepositoryEntityManagerImpl(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
 
     @Override
     public List<Product> findByName(String name) {
@@ -89,6 +96,19 @@ public class ProductsRepositoryEntityManagerImpl implements ProductsRepository {
 
     @Override
     public List<Product> findAll() {
+        //пытался использовать Хикари
+/*        return template.query(SQL_SELECT_ALL_PRODUCTS, (row, rowNumber) -> Product.builder()
+                .id(row.getLong("id"))
+                .name(row.getString("name"))
+                .model(row.getString("model"))
+                .description(row.getString("description"))
+                .color(row.getString("color"))
+                .productCode(row.getString("product_code"))
+                .rating(row.getInt("rating"))
+                .price(row.getInt("price"))
+                .build());
+*/
+
         return entityManager
                 .createQuery("from Product product order by product.id", Product.class)
                 .getResultList();

@@ -22,4 +22,10 @@
         <property name="password" value="${datasource.password}"/>
         <property name="driverClassName" value="${datasource.driver}"/>
     </bean>
+
+    <bean id="product" class="com.company.models.Product"></bean>
+    <bean id="question" class="com.company.models.Question"></bean>
+    <bean id="review" class="com.company.models.Review"></bean>
+    <bean id="user" class="com.company.models.User"></bean>
+    <bean id="usersProfile" class="com.company.models.UsersProfile"></bean>
 </beans>

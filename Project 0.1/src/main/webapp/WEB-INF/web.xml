@@ -30,7 +30,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>productDeleteJspServlet</servlet-name>
-        <url-pattern>/productDelete</url-pattern>
+        <url-pattern>/productDelete/*</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -39,7 +39,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>productUpdateJspServlet</servlet-name>
-        <url-pattern>/productUpdate</url-pattern>
+        <url-pattern>/productUpdate/*</url-pattern>
     </servlet-mapping>
 
     <listener>
