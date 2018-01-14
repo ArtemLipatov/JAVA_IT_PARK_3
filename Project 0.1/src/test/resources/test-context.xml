@@ -8,8 +8,8 @@
     </bean>
 
     <jdbc:embedded-database id="dataSource" type="HSQL">
-        <jdbc:script location="classpath:schema_user.sql"/>
-        <jdbc:script location="classpath:data_user.sql"/>
+        <jdbc:script location="classpath:schemas/schema_user.sql"/>
+        <jdbc:script location="classpath:datas/data_user.sql"/>
     </jdbc:embedded-database>
 
 </beans>

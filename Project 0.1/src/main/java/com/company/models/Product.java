@@ -11,9 +11,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @ToString
 @EqualsAndHashCode
-@Builder
 @Getter
 @Setter
+@Builder
 
 public class Product {
     @Id

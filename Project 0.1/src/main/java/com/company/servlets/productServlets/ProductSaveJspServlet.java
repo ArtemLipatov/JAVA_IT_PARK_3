@@ -29,7 +29,6 @@ public class ProductSaveJspServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
-        Long id = Long.parseLong(req.getParameter("id"));
         String name = req.getParameter("name");
         String model = req.getParameter("model");
         String description = req.getParameter("description");
@@ -39,7 +38,6 @@ public class ProductSaveJspServlet extends HttpServlet {
         int price = Integer.parseInt(req.getParameter("price"));
 
         Product product = Product.builder()
-                .id(id)
                 .name(name)
                 .model(model)
                 .description(description)

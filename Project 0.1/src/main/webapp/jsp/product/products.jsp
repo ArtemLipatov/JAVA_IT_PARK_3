@@ -95,7 +95,6 @@
             <%--<% } %>--%>
         </table>
         <form action="/products" method="post">
-            <input type="text" name="id" placeholder="Id">
             <input type="text" name="name" placeholder="Имя">
             <input type="text" name="model" placeholder="Модель">
             <input type="text" name="description" placeholder="Описание">

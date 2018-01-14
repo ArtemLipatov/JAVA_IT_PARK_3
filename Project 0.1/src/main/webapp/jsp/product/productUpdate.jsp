@@ -65,14 +65,14 @@
                     <th>Подтвердить</th>
                 </tr>
                 <tr>
-                    <td>${product.id}</td>
-                    <td>${product.name}</td>
-                    <td>${product.model}</td>
-                    <td>${product.description}</td>
-                    <td>${product.color}</td>
-                    <td>${product.productCode}</td>
-                    <td>${product.rating}</td>
-                    <td>${product.price}</td>
+                    <td><input type="text" name="id" value="${product.id}" readonly></td>
+                    <td><input type="text" name="name" value="${product.name}"></td>
+                    <td><input type="text" name="price" value="${product.model}" required></td>
+                    <td><input type="text" name="price" value="${product.description}" required></td>
+                    <td><input type="text" name="price" value="${product.color}" required></td>
+                    <td><input type="text" name="price" value="${product.productCode}" required></td>
+                    <td><input type="text" name="price" value="${product.rating}" required></td>
+                    <td><input type="text" name="price" value="${product.price}" required></td>
                     <td><input type="submit" value="Сохранить"></td>
                 </tr>
             </table>

@@ -42,6 +42,10 @@
         <url-pattern>/productUpdate/*</url-pattern>
     </servlet-mapping>
 
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
     <listener>
         <listener-class>com.company.ContextListener</listener-class>
     </listener>
