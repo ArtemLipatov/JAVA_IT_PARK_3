@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+
+    <servlet>
+        <servlet-name>usersJspServlet</servlet-name>
+        <servlet-class>com.company.servlets.userServlets.UsersJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>usersJspServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>productSaveJspServlet</servlet-name>
+        <servlet-class>com.company.servlets.productServlets.ProductSaveJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productSaveJspServlet</servlet-name>
+        <url-pattern>/products</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>productDeleteJspServlet</servlet-name>
+        <servlet-class>com.company.servlets.productServlets.ProductDeleteJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productDeleteJspServlet</servlet-name>
+        <url-pattern>/productDelete/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>productUpdateJspServlet</servlet-name>
+        <servlet-class>com.company.servlets.productServlets.ProductUpdateJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productUpdateJspServlet</servlet-name>
+        <url-pattern>/productUpdate/*</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <listener>
+        <listener-class>com.company.ContextListener</listener-class>
+    </listener>
+</web-app>
