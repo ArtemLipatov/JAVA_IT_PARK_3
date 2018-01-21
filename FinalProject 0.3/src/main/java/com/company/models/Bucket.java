@@ -3,23 +3,20 @@ package com.company.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
-
+@Entity
+@Table(name = "bucket")
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-@Table(name = "question")
 @EqualsAndHashCode
-
-public class Question {
+@Builder
+public class Bucket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String text;
-    private String date;
-    private int usersId;
-    private String userName;
+    private Long userId;
 }
-

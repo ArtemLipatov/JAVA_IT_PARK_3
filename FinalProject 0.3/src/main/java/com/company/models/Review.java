@@ -3,11 +3,9 @@ package com.company.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
-
 
 @Entity
-@Table(name = "users")
+@Table(name = "review")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,14 +14,15 @@ import java.util.List;
 @EqualsAndHashCode
 @Builder
 
-public class User {
+
+public class Review {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String email;
-    private String password;
-
+    private String text;
+    private String date;
+    private int rating;
+    private int usersId;
+    private int productId;
 }
-
-
