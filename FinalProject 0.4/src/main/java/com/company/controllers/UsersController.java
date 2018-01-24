@@ -23,6 +23,6 @@ public class UsersController {
                            @RequestParam("order_by") String orderBy){
         List<User> users = service.getUsers(orderBy);
         model.addAttribute("users", users);
-        return "users_page";
+        return "users";
     }
 }

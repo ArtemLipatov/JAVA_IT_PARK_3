@@ -1,4 +1,7 @@
 <#ftl encoding='UTF-8'>
+<#import 'spring.ftl' as spring>
+<@spring.bind "model"/>
+
 <html>
 <head>
     <meta charset="utf-8">
@@ -12,11 +15,11 @@
             margin-top: 10px
         }
 
-        #form_input > div {
+        #form_input>div {
             float: left
         }
 
-        #form_input > div > input {
+        #form_input>div>input {
             border-radius: 50px;
             border: 1px solid #c4c4c4;
             font-size: .8em;
@@ -25,7 +28,7 @@
             background-color: #fff
         }
 
-        #form_input > div > input:focus,
+        #form_input>div>input:focus,
         #form_input textarea:focus {
             border: 1px solid #adadad
         }
@@ -54,22 +57,20 @@
             border-bottom-color: #1999d1
         }
 
-        @media (min-width: 600px) {
-            #form_input > div {
+        @media (min-width:600px) {
+            #form_input>div {
                 width: 50%
             }
-
-            #form_input > div > input {
+            #form_input>div>input {
                 width: 76%
             }
         }
 
-        @media (max-width: 599px) {
-            #form_input > div {
+        @media (max-width:599px) {
+            #form_input>div {
                 width: 100%
             }
-
-            #form_input > div > input {
+            #form_input>div>input {
                 width: 70%
             }
         }
@@ -115,37 +116,9 @@
                 <a href="video">Видеонаблюдение</a>
             </div>
         </nav>
-        <div id="main">
-            <div id="news">
-                <h2 class="heading">Регистрация на сайте</h2>
-                <div style="clear: both">
-                    <br>
-                </div>
-                <div class="block">
-                    Введите данные для регистрации на сайте
-                    <form id="form_input" name="registrationForm" method="post" action="/registration">
-                        <div>
-                            <input type="text" name="login" placeholder="Логин"
-                                   onclick="$(this).css ('border-color', '#ccc')">
-                        </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Email.."
-                                   onclick="$(this).css ('border-color', '#ccc')">
-                        </div>
-                        <div>
-                            <input type="password" name="password" placeholder="Ваш пароль"
-                                   onclick="$(this).css ('border-color', '#ccc')">
-                        </div>
-                        <div>
-                            <input type="password" name="password2" placeholder="Повторите пароль"
-                                   onclick="$(this).css ('border-color', '#ccc')">
-                        </div>
-                        <div id="send" class="btn" style="float: right">Зарегистрироваться</div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+        <h1>${model.name}, поздравляем с успешной регистрацией , ваш Id - ${model.id}</h1>
 
+    </div>
+</div>
 </body>
 </html>

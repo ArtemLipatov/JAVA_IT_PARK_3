@@ -25,8 +25,8 @@ public class RegistrationServiceImpl implements RegistrationService {
         LocalDateTime registrationTime = LocalDateTime.now();
 
         User newUser = User.builder()
-                .name(form.getName)
-                .email(form.getEmail)
+                .name(form.getName())
+                .email(form.getEmail())
                 .hashPassword(hashPassword)
                 .registrationTime(registrationTime)
                 .build();
