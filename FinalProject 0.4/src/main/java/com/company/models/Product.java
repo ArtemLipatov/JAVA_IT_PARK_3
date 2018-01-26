@@ -28,8 +28,8 @@ public class Product {
     private String productCode;
     private int rating;
     private int price;
-    @Column(name = "product_path")
-    private String productPath;
+    @Column(name = "image_path")
+    private String imagePath;
 
 }
 

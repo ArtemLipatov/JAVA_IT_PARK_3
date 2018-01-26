@@ -22,6 +22,6 @@ public class Bucket {
     private Long usersId;
 
 
-    private List<Product> productList;
+  //  private List<Product> productList;
 
 }
