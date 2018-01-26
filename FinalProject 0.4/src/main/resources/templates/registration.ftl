@@ -96,7 +96,7 @@
                         Войти
                     </div>
                 </a>
-                <a href="reg" title="Зарегистрироваться на сайте">
+                <a href="registration.ftl" title="Зарегистрироваться на сайте">
                     <div class="btn">
                         Регистрация
                     </div>

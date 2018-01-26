@@ -1,6 +1,5 @@
 package com.company.controllers;
 
-
 import com.company.forms.RegistrationForm;
 import com.company.services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;

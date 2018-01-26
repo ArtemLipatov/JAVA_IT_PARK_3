@@ -19,6 +19,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private String model;
     private String description;
@@ -27,6 +28,8 @@ public class Product {
     private String productCode;
     private int rating;
     private int price;
+    @Column(name = "product_path")
+    private String productPath;
 
 }
 

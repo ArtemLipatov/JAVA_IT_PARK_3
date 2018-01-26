@@ -1,83 +1,14 @@
 <#ftl encoding='UTF-8'>
 <#import 'spring.ftl' as spring>
 <@spring.bind "model"/>
-
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Регистрация</title>
+    <title>Список товаров</title>
     <link rel="stylesheet" href="css/A.main_style.css.pagespeed.cf.ckSp8gDoOX.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="css/A.main_page_style.css.pagespeed.cf.42EpeVMWp4.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="css/A.aside.css.pagespeed.cf.AcnkbKT635.css" type="text/css" charset="utf-8">
-    <style charset="utf-8">
-        #form_input {
-            float: left;
-            width: 100%;
-            margin-top: 10px
-        }
-
-        #form_input>div {
-            float: left
-        }
-
-        #form_input>div>input {
-            border-radius: 50px;
-            border: 1px solid #c4c4c4;
-            font-size: .8em;
-            padding: 10px 5%;
-            margin-bottom: 10px;
-            background-color: #fff
-        }
-
-        #form_input>div>input:focus,
-        #form_input textarea:focus {
-            border: 1px solid #adadad
-        }
-
-        #form_input textarea {
-            border-radius: 5px;
-            border: 1px solid #c4c4c4;
-            font-size: .8em;
-            padding: 10px;
-            width: 76%;
-            background-color: #fff;
-            resize: vertical;
-            max-height: 200px;
-            min-height: 70px
-        }
-
-        #form_input .btn {
-            border-bottom-color: #1999d1;
-            background-color: #21a7e1;
-            cursor: pointer;
-            text-align: center;
-            width: auto
-        }
-
-        #form_input .btn:hover {
-            border-bottom-color: #1999d1
-        }
-
-        @media (min-width:600px) {
-            #form_input>div {
-                width: 50%
-            }
-            #form_input>div>input {
-                width: 76%
-            }
-        }
-
-        @media (max-width:599px) {
-            #form_input>div {
-                width: 100%
-            }
-            #form_input>div>input {
-                width: 70%
-            }
-        }
-    </style>
     <link rel="stylesheet" href="css/A.font-awesome.min.css.pagespeed.cf.YaV9IcR0kC.css">
 </head>
-
 <body>
 <div id="wrapper">
     <div id="content">
@@ -92,7 +23,7 @@
                 <a href="index" title="Обратная связь">Задать вопрос консультанту</a>
             </div>
             <div id="reg_auth">
-                <a href="user" title="Войти в кабинет пользователя">
+                <a href="" title="Авторизоваться на сайте">
                     <div class="btn">
                         Войти
                     </div>
@@ -116,8 +47,30 @@
                 <a href="video">Видеонаблюдение</a>
             </div>
         </nav>
-        <h1>${model.name}, поздравляем с успешной регистрацией , ваш Id - ${model.id}</h1>
-
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Имя</th>
+                <th>Модель</th>
+                <th>Описание</th>
+                <th>Цвет</th>
+                <th>Код продукста</th>
+                <th>Рейтинг</th>
+                <th>Цена</th>
+            </tr>
+            <#list model.products as product>
+                <tr>
+                    <td>${product.id}</td>
+                    <td>${product.name}</td>
+                    <td>${product.model}</td>
+                    <td>${product.description}</td>
+                    <td>${product.color}</td>
+                    <td>${product.productCode}</td>
+                    <td>${product.rating}</td>
+                    <td>${product.price}</td>
+                </tr>
+            </#list>
+        </table>
     </div>
 </div>
 </body>

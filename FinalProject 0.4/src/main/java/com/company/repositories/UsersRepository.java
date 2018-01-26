@@ -9,5 +9,6 @@ public interface UsersRepository extends JpaRepository<User, Long> {
     List<User> findByOrderByRegistrationTime();
     List<User> findByOrderByRegistrationTimeDesc();
     List<User> findByOrderById();
+    List<User> findByOrderByIdDesc();
     List<User> findByOrderByName();
 }
