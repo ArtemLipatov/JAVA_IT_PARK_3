@@ -18,7 +18,7 @@
     <div id="content">
     <#include 'common/header.ftl'/>
     <#include 'common/nav.ftl'/>
-        <h1>${model.name}, поздравляем с успешной регистрацией , ваш Id - ${model.id}</h1>
+        <h1>Поздравляем с успешной регистрацией, подтвердите ваши данные, перейдя по ссылке на почте </h1>
 
     </div>
 </div>

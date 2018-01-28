@@ -36,6 +36,6 @@ public class RegistrationController {
             @PathVariable("confirm-string") String confirmString) {
         boolean result = service.confirm(confirmString);
         model.addAttribute("result", result);
-        return "confirm_result_page";
+        return "confirm_result";
     }
 }

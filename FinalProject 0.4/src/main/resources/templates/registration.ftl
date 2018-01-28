@@ -25,7 +25,7 @@
                     Введите данные для регистрации на сайте
                     <form id="form_input" name="registrationForm" method="post" action="/registration">
                         <div>
-                            <input type="text" name="login" placeholder="Логин"
+                            <input type="text" name="name" placeholder="Логин"
                                    onclick="$(this).css ('border-color', '#ccc')">
                         </div>
                         <div>
@@ -40,7 +40,7 @@
                             <input type="password" name="password2" placeholder="Повторите пароль"
                                    onclick="$(this).css ('border-color', '#ccc')">
                         </div>
-                        <div id="send" class="btn" style="float: right">Зарегистрироваться</div>
+                            <input type="submit" class="btn" style="float: right" placeholder="Зарегистрироваться"/>
                     </form>
                 </div>
             </div>
