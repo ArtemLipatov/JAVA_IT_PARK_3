@@ -21,6 +21,7 @@ public class UsersServiceImpl implements UsersService {
             case "registration_date": return usersRepository.findByOrderByRegistrationTime();
             case "desc_registration_date": return usersRepository.findByOrderByRegistrationTimeDesc();
             case "id": return usersRepository.findByOrderById();
+            case "desc_id": return usersRepository.findByOrderByIdDesc();
             case "name": return usersRepository.findByOrderByName();
         }
         return usersRepository.findAll();

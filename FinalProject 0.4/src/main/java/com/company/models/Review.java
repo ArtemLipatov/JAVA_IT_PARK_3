@@ -22,8 +22,14 @@ public class Review {
     private String text;
     private String date;
     private int rating;
-    private Long usersId;
-    private Long productId;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_id")
+    private User usersId;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="product_id")
+    private Product productId;
 
 
 }

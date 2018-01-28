@@ -23,6 +23,9 @@ public class UsersProfile {
     private String lastName;
     private String organization;
     private String phonenumber;
-    private Long usersId;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_id")
+    private User userId;
 
 }

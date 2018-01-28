@@ -21,6 +21,12 @@ public class Question {
     private Long id;
     private String text;
     private LocalDateTime questionDateTime;
-    private Long usersId;
-    private String userName;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_id")
+    private User usersId;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_name")
+    private User userName;
 }

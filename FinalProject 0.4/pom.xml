@@ -12,6 +12,7 @@
         <lombok.version>1.16.18</lombok.version>
         <postgres.version>42.1.4</postgres.version>
         <hibernate.version>5.2.12.Final</hibernate.version>
+        <javaxmail.version>1.4.7</javaxmail.version>
     </properties>
 
     <parent>
@@ -47,6 +48,11 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${javaxmail.version}</version>
         </dependency>
     </dependencies>
 

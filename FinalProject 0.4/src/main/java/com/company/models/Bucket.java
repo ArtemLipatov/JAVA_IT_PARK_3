@@ -18,10 +18,16 @@ public class Bucket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "users_id")
-    private Long usersId;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="user_id")
+    private User userId;
 
-  //  private List<Product> productList;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="product_id")
+    private Product productId;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Product> productList;
 
 }

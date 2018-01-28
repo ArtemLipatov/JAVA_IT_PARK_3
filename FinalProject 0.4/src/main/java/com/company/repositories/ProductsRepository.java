@@ -7,4 +7,15 @@ import java.util.List;
 
 public interface ProductsRepository extends JpaRepository<Product, Long> {
 
+    List<Product> findAllOrderById();
+    List<Product> findAllOrderByIdDesc();
+    List<Product> findAllOrderByName();
+    List<Product> findAllOrderByModel();
+    List<Product> findAllOrderByProductCode();
+    List<Product> findAllOrderByProductCodeDesc();
+    List<Product> findAllOrderByPrice();
+    List<Product> findAllOrderByPriceDesc();
+    List<Product> findAllOrderByRating();
+    List<Product> findAllOrderByRatingDesc();
+
 }
