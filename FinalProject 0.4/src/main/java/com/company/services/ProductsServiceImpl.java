@@ -16,16 +16,16 @@ public class ProductsServiceImpl implements ProductsService {
     @Override
     public List<Product> getProducts(String orderBy) {
         switch (orderBy) {
-            case "id" : return productsRepository.findAllOrderById();
-            case "desc_id" : return productsRepository.findAllOrderByIdDesc();
-            case "name" : return productsRepository.findAllOrderByName();
-            case "model" : return productsRepository.findAllOrderByModel();
-            case "product_code" : return productsRepository.findAllOrderByProductCode();
-            case "desc_product_code" : return productsRepository.findAllOrderByProductCodeDesc();
-            case "price" : return productsRepository.findAllOrderByPrice();
-            case "desc_price" : return productsRepository.findAllOrderByPriceDesc();
-            case "rating" : return productsRepository.findAllOrderByRating();
-            case "desc_rating" : return productsRepository.findAllOrderByRatingDesc();
+            case "id" : return productsRepository.findByOrderById();
+            case "desc_id" : return productsRepository.findByOrderByIdDesc();
+            case "name" : return productsRepository.findByOrderByName();
+            case "model" : return productsRepository.findByOrderByModel();
+            case "product_code" : return productsRepository.findByOrderByProductCode();
+            case "desc_product_code" : return productsRepository.findByOrderByProductCodeDesc();
+            case "price" : return productsRepository.findByOrderByPrice();
+            case "desc_price" : return productsRepository.findByOrderByPriceDesc();
+            case "rating" : return productsRepository.findByOrderByRating();
+            case "desc_rating" : return productsRepository.findByOrderByRatingDesc();
         }
         return productsRepository.findAll();
     }
