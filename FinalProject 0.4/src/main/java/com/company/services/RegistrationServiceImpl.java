@@ -1,6 +1,7 @@
 package com.company.services;
 
 import com.company.forms.RegistrationForm;
+import com.company.models.Role;
 import com.company.models.State;
 import com.company.models.User;
 import com.company.repositories.UsersRepository;
@@ -41,6 +42,7 @@ public class RegistrationServiceImpl implements RegistrationService {
                 .confirmCode(confirmString)
                 .expiredDate(LocalDateTime.now().plusHours(3))
                 .email(form.getEmail())
+                .role(Role.USER)
                 .hashPassword(hashPassword)
                 .registrationTime(registrationTime)
                 .build();

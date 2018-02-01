@@ -5,10 +5,7 @@ import com.company.services.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class RegistrationController {
@@ -37,5 +34,17 @@ public class RegistrationController {
         boolean result = service.confirm(confirmString);
         model.addAttribute("result", result);
         return "confirm_result";
+    }
+
+    @GetMapping("/login")
+    public String login(
+            @ModelAttribute("model") ModelMap model,
+            @RequestParam(value = "error", required = false) Boolean error) {
+        if (error != null) {
+            model.addAttribute("error", true);
+        } else {
+            model.addAttribute("error", false);
+        }
+        return "login";
     }
 }

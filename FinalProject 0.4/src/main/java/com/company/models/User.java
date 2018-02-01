@@ -8,8 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "owner")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
@@ -23,7 +22,6 @@ public class User {
 
     private String name;
     private String email;
-    private String password;
 
 
     private String hashPassword;
@@ -35,5 +33,8 @@ public class User {
 
     @Enumerated(value = EnumType.STRING)
     private State state;
+
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
 
 }
