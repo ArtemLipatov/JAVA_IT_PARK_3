@@ -13,7 +13,7 @@
 <body>
 <div id="wrapper">
     <div id="content">
-    <#include 'common/header.ftl'/>
+    <#include 'common/header_login.ftl'/>
     <#include 'common/nav.ftl'/>
         <div id="main">
             <div id="news">

@@ -31,6 +31,11 @@ public class User {
     private String confirmCode;
     private LocalDateTime expiredDate;
 
+    private String firstName;
+    private String lastName;
+    private String organization;
+    private String phonenumber;
+
     @Enumerated(value = EnumType.STRING)
     private State state;
 

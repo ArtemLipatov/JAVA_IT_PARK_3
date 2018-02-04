@@ -1,7 +1,7 @@
 package com.company.controllers;
 
 
-import com.company.forms.NamesForm;
+import com.company.forms.ProfileForm;
 import com.company.models.User;
 import com.company.services.AuthenticationService;
 import com.company.services.UsersService;
@@ -36,7 +36,7 @@ public class UsersController {
                            @RequestParam("order_by") String orderBy){
         List<User> users = service.getUsers(orderBy);
         model.addAttribute("users", users);
-        return "users";
+        return "users_page";
     }
 
     @GetMapping("/users/{user-id}")
@@ -50,7 +50,7 @@ public class UsersController {
     @PostMapping("/users/{user-id}")
     @ResponseBody
     public ResponseEntity<Object> updateUser(@PathVariable("user-id") Long userId,
-                                             NamesForm form) {
+                                             ProfileForm form) {
         service.update(userId, form);
         return ResponseEntity.accepted().build();
     }

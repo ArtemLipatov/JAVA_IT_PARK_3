@@ -24,7 +24,7 @@ public class RegistrationController {
 
     @GetMapping("/registration")
     public String getRegistrationPage(){
-        return "registration";
+        return "registration_page";
     }
 
     @GetMapping("/confirm/{confirm-string}")
@@ -33,7 +33,7 @@ public class RegistrationController {
             @PathVariable("confirm-string") String confirmString) {
         boolean result = service.confirm(confirmString);
         model.addAttribute("result", result);
-        return "confirm_result";
+        return "confirm_result_page";
     }
 
     @GetMapping("/login")

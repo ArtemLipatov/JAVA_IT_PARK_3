@@ -1,5 +1,5 @@
 package com.company.models;
 
 public enum  Role {
-    ADMIN, USER
+    ADMIN, MODERATOR, USER
 }

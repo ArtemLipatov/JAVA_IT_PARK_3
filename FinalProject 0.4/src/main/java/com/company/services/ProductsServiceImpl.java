@@ -18,7 +18,7 @@ public class ProductsServiceImpl implements ProductsService {
         switch (orderBy) {
             case "id" : return productsRepository.findByOrderById();
             case "desc_id" : return productsRepository.findByOrderByIdDesc();
-            case "name" : return productsRepository.findByOrderByName();
+            case "category" : return productsRepository.findByOrderByCategory();
             case "model" : return productsRepository.findByOrderByModel();
             case "product_code" : return productsRepository.findByOrderByProductCode();
             case "desc_product_code" : return productsRepository.findByOrderByProductCodeDesc();

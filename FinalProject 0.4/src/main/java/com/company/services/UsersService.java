@@ -1,6 +1,6 @@
 package com.company.services;
 
-import com.company.forms.NamesForm;
+import com.company.forms.ProfileForm;
 import com.company.models.User;
 
 import java.util.List;
@@ -10,5 +10,5 @@ public interface UsersService {
 
     User getUser(Long userId);
 
-    void update(Long userId, NamesForm form);
+    void update(Long userId, ProfileForm form);
 }

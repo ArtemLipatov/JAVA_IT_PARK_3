@@ -13,7 +13,11 @@
 <body>
 <div id="wrapper">
     <div id="content">
-    <#include 'common/header.ftl'/>
+        <#if model.user??>
+            <#include 'common/header_logout.ftl'/>
+        <#else>
+            <#include 'common/header_login.ftl'/>
+        </#if>
     <#include 'common/nav.ftl'/>
         <table>
             <tr>

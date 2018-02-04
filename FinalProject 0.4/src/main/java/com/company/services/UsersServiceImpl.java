@@ -1,6 +1,6 @@
 package com.company.services;
 
-import com.company.forms.NamesForm;
+import com.company.forms.ProfileForm;
 import com.company.models.User;
 import com.company.repositories.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public void update(Long userId, NamesForm form) {
+    public void update(Long userId, ProfileForm form) {
         User user = usersRepository.findOne(userId);
         form.update(user);
         usersRepository.save(user);

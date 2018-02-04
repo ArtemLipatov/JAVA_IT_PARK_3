@@ -23,7 +23,7 @@ public class ProductsController {
                               @RequestParam("order_by") String orderBy){
         List<Product> products = productsService.getProducts(orderBy);
         model.addAttribute("products", products);
-        return "products";
+        return "products_page";
 
     }
 }

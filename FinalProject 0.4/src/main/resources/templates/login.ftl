@@ -7,16 +7,15 @@
     <link rel="stylesheet" href="/css/A.aside.css.pagespeed.cf.AcnkbKT635.css">
     <link rel="stylesheet" href="/css/A.font-awesome.min.css.pagespeed.cf.YaV9IcR0kC.css">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style2.css">
 </head>
 
 <body>
 <div id="wrapper">
     <div id="content">
-    <#include 'common/header.ftl'/>
+    <#include 'common/header_login.ftl'/>
     <#include 'common/nav.ftl'/>
         <#if model.error == true>
-    <h1>Неверно введен имя пользователяи пароль</h1>
+    <h1>Неверное имя пользователя или пароль</h1>
         </#if>
         <div id="main">
             <div id="news">
@@ -27,7 +26,8 @@
                 </div>
                 <div class="block">
                     <p id="textHint">Чтобы войти на сайт используйте ваш email и пароль, которые были указаны при регистрации на сайте</p>
-                    <form id="form_input"name="registrationForm"
+                    <form id="form_input"
+                          name="registrationForm"
                           method="post"
                           action="/login">
                         <br>
@@ -35,10 +35,12 @@
                         </br>
                         <br>
                             <input type="password" id="password" placeholder="Ваш пароль" onclick="$(this).css ('border-color', '#ccc')">
-                            <i class="fa fa-eye" style="cursor: pointer" onclick="showPass ('#password', '#eye')" id="eye" aria-hidden="true"></i>
+                            <input type="checkbox" name="remember-me">Запомнить
                         </br>
                         <div id="mess"></div>
-                        <div id="send" class="btn" style="float: right"><input type="submit" placeholder="Войти"/> </div>
+                        <div>
+                            <input id="send" class="btn" style="float: right" type="submit" placeholder="Войти"/>
+                        </div>
                     </form>
                 </div>
             </div>
