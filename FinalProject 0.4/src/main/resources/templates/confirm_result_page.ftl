@@ -3,7 +3,7 @@
 <@spring.bind "model"/>
 <html>
 <head>
-    <title>Подтвреждение</title>
+    <title>Подтвреждение регистрации</title>
     <link rel="stylesheet" href="css/A.main_style.css.pagespeed.cf.ckSp8gDoOX.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="css/A.aside.css.pagespeed.cf.AcnkbKT635.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="css/A.font-awesome.min.css.pagespeed.cf.YaV9IcR0kC.css">
