@@ -4,6 +4,7 @@ package com.company.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "review")
@@ -20,7 +21,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String text;
-    private String date;
+    private LocalDateTime reviewDateTime;
     private int rating;
 
     @OneToOne(cascade = CascadeType.ALL)

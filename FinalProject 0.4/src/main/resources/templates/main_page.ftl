@@ -19,6 +19,27 @@
             <#include 'common/header_login.ftl'/>
         </#if>
     <#include 'common/nav.ftl'/>
+        <div id="main">
+            <div id="news">
+                <h1 class="heading">Спецпредложения</h1>
+                <div style="clear: both">
+                    <br>
+                </div>
+                <div class="flex-cont">
+                    <div class="article">
+                        <a href="products/1" title="Мини-АТС LG Aria Soho">
+                            <img src="img/aria-soho.jpg" alt="Мини-АТС LG Aria Soho" title="Мини-АТС LG Aria Soho">
+                            <span>Мини-АТС LG Aria Soho</span>
+                        </a>
+                        <br>
+                        <span>Мини-АТС LG Aria Soho (3 городские аналоговые линии  и 8 внутренних линий, расширяется до 12 х 48).</span>
+                        <br>
+                    </div>
+                    </a>
+                </div>
+                </aside>
+            </div>
+        </div>
     </div>
 </div>
 </body>

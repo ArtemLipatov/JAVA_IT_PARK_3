@@ -3,7 +3,7 @@ INSERT INTO owner
   SELECT
     1,
     'admin@admin.com',
-    '$2a$10$FjkmLRPsJ24FoiJ1L.Rxg.mqvoOlJ3gi4myItAk8HcKtgEeiHpNvW',
+    '$2a$10$ECSKW1RjSBn3gsjmES0wruiLhzzzU23O/.2H4byTxSbwZwPXvjD7u',
     'CONFIRMED',
     'ADMIN'
   WHERE

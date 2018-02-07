@@ -20,14 +20,17 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String category;
+    @Enumerated(value = EnumType.STRING)
+    private Category category;
+
+
     private String model;
     private String description;
     private String color;
     @Column(name="product_code")
     private String productCode;
     private int rating;
-    private int price;
+    private double price;
     @Column(name = "image_path")
     private String imagePath;
 

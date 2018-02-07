@@ -22,7 +22,7 @@
         <table>
             <tr>
                 <th>ID</th>
-                <th>Имя</th>
+                <th>Категория</th>
                 <th>Модель</th>
                 <th>Описание</th>
                 <th>Цвет</th>
@@ -33,7 +33,7 @@
             <#list model.products as product>
                 <tr>
                     <td>${product.id}</td>
-                    <td>${product.name}</td>
+                    <td>${product.category}</td>
                     <td>${product.model}</td>
                     <td>${product.description}</td>
                     <td>${product.color}</td>
