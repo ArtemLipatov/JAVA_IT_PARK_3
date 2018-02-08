@@ -2,8 +2,10 @@ package com.company.forms;
 
 import com.company.models.User;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 
 public class ProfileForm {
     private String firstName;

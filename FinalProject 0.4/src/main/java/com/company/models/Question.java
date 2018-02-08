@@ -19,14 +19,12 @@ public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String userName;
     private String text;
+    private String phonenumber;
+    private String email;
     private LocalDateTime questionDateTime;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_id")
-    private User usersId;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_name")
-    private User userName;
 }

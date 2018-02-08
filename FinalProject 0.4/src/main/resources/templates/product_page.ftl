@@ -22,12 +22,13 @@
         <h1>Модель: ${model.product.model}</h1>
         <p>Код продукта: ${model.product.productCode}</p>
         <p>Категория: ${model.product.category}</p>
-        <img src="${model.product.imagePath}" width="200px" height="200px" alt="picture">
+        <img src="${model.product.imagePath}" width="300px" height="300px" alt="picture">
         <h2>Цена: ${model.product.price}</h2>
         <p>Цвет: ${model.product.color}</p>
         <p>Описание: ${model.product.description}</p>
         <p>Рейтинг: ${model.product.rating}</p>
     </div>
+    <a href="/">Вернутся на главную страницу</a>
 </div>
 </body>
 </html>

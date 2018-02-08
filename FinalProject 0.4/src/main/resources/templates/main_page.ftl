@@ -1,6 +1,7 @@
 <#ftl encoding='UTF-8'>
 <#import 'spring.ftl' as spring>
 <@spring.bind "model"/>
+
 <html>
 <head>
     <title>Главная</title>

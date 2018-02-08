@@ -6,7 +6,7 @@
         </a>
     </div>
     <div id="about">
-        <a href="/" title="Обратная связь">Задать вопрос консультанту</a>
+        <a href="/add_question" title="Обратная связь">Задать вопрос консультанту</a>
     </div>
     <div id="reg_auth">
         <a href="/profile" title="Войти в кабинет пользователя">

@@ -18,7 +18,9 @@
     <#include 'common/header_login.ftl'/>
     <#include 'common/nav.ftl'/>
         <#if model.error == true>
-    <h1>Неверное имя пользователя или пароль</h1>
+        <center>
+            <h1><font color="red">Неверное имя пользователя или пароль</font></h1>
+        </center>
         </#if>
         <div id="main">
             <div id="news">
