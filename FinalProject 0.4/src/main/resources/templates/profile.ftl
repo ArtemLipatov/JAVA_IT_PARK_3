@@ -19,10 +19,10 @@
 <#include 'common/nav.ftl'/>
         <h1>Здравствуйте, ${model.user.name}</h1>
         <h2>Введите или измените данные в профиле</h2>
-        <input type="text" id="firstName" name="firstName" value="${model.user.firstName}"/>
-        <input type="text" id="lastName" name="lastName" value="${model.user.lastName}"/>
-        <input type="text" id="organization" name="organization" value="${model.user.organization}"/>
-        <input type="text" id="phonenumber" name="phonenumber" value="${model.user.phonenumber}"/>
+        <input type="text" id="firstName" name="firstName" value="<#if model.user.firstName??>${model.user.firstName}</#if>"/>
+        <input type="text" id="lastName" name="lastName" value="<#if model.user.lastName??>${model.user.lastName}</#if>"/>
+        <input type="text" id="organization" name="organization" value="<#if model.user.organization??>${model.user.organization}</#if>"/>
+        <input type="text" id="phonenumber" name="phonenumber" value="<#if model.user.phonenumber??>${model.user.phonenumber}</#if>"/>
         <button onclick="updateProfile(
             document.getElementById('firstName').value,
             document.getElementById('lastName').value,

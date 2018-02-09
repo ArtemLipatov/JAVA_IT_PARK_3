@@ -1,7 +1,7 @@
 <header>
     <div id="logo">
         <a href="/" title="На главную страницу">
-            <img src="img\logo.jpg" title="Название компании" alt="Логотип компании">
+            <img src="/img/logo.jpg" title="Название компании" alt="Логотип компании">
             <span>Название</span>
         </a>
     </div>

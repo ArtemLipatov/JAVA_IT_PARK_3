@@ -49,7 +49,7 @@ public class QuestionController {
     }
 
     @GetMapping("/add_question")
-    public String getAddProductPage(){
+    public String getAddProductPage(@ModelAttribute("model") ModelMap model){
         return "add_question_page";
     }
 }

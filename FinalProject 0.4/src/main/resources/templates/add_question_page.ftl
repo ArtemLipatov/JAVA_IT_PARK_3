@@ -3,7 +3,6 @@
 <@spring.bind "model"/>
 <html>
 <head>
-    <meta charset="utf-8">
     <title>Задать вопрос</title>
     <link rel="stylesheet" href="/css/A.main_style.css.pagespeed.cf.ckSp8gDoOX.css">
     <link rel="stylesheet" href="/css/A.aside.css.pagespeed.cf.AcnkbKT635.css">

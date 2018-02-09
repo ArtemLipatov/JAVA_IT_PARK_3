@@ -19,6 +19,7 @@ public class ProductsServiceImpl implements ProductsService {
     @Override
     @SneakyThrows
     public String addProduct(ProductForm form){
+        // Category.valueOf(form.getCategory)
         Product newProduct = Product.builder()
                 .category(Category.СКС)
                 .model(form.getModel())
