@@ -1,0 +1,47 @@
+package com.company.controllers;
+
+
+import com.company.forms.EditReviewForm;
+import com.company.forms.ReviewForm;
+import com.company.models.Review;
+import com.company.services.ReviewService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class ReviewsController {
+
+    @Autowired
+    private ReviewService reviewService;
+
+    @PostMapping("/add_review")
+    public String addReview(ReviewForm form){
+        reviewService.addReview(form);
+        return "redirect:/product?id=" + form.getProductId();
+    }
+
+    @GetMapping("/edit_review")
+    public String getProfilePage(@ModelAttribute("model")ModelMap model, @RequestParam(value = "id") Long reviewId){
+        Review review = reviewService.getReview(reviewId);
+        model.addAttribute("review", review);
+        return "edit_review";
+    }
+
+    @PostMapping("/edit_review")
+    public String editReview(EditReviewForm form){
+        reviewService.updateReview(form);
+        return "redirect:/product?id=" + reviewService.getReview(form.getId()).getProductId().getId();
+    }
+
+    @PostMapping("/delete_review")
+    public String editReview(@RequestParam(value = "id")Long reviewId){
+        Long id = reviewService.getReview(reviewId).getProductId().getId();
+        reviewService.deleteReview(reviewId);
+        return "redirect:/product?id=" + id;
+    }
+}
