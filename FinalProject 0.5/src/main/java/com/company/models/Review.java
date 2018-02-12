@@ -20,17 +20,17 @@ public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String text;
     private LocalDateTime reviewDateTime;
 
-
     @ManyToOne
     @JoinColumn(name="user_id")
-    private User usersId;
+    private User users;
 
     @ManyToOne
     @JoinColumn(name="product_id")
-    private Product productId;
+    private Product product;
 
 
 }

@@ -3,7 +3,7 @@
 <@spring.bind "model"/>
 <html>
 <head>
-    <title>Список товаров</title>
+    <title>Список вопросов</title>
     <link rel="stylesheet" href="/css/A.main_style.css.pagespeed.cf.ckSp8gDoOX.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="/css/A.main_page_style.css.pagespeed.cf.42EpeVMWp4.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="/css/A.aside.css.pagespeed.cf.AcnkbKT635.css" type="text/css" charset="utf-8">
@@ -21,22 +21,22 @@
     <#include 'common/nav.ftl'/>
         <table>
             <tr>
-                <th>Код продукта</th>
-                <th>Категория</th>
-                <th>Модель</th>
-                <th>Описание</th>
-                <th>Цвет</th>
-                <th>Цена</th>
+                <th>Id</th>
+                <th>Имя</th>
+                <th>Email</th>
+                <th>Номер телефона</th>
+                <th>Дата</th>
+                <th>Текст вопроса</th>
             </tr>
 
-            <#list model.products as product>
+            <#list model.questions as question>
                 <tr>
-                    <td>${product.productCode}</td>
-                    <td>${product.category}</td>
-                    <td>${product.model}</td>
-                    <td>${product.description}</td>
-                    <td>${product.color}</td>
-                    <td>${product.price}</td>
+                    <td>${question.id}</td>
+                    <td>${question.userName}</td>
+                    <td>${question.email}</td>
+                    <td>${question.phonenumber}</td>
+                    <td>${question.questionDateTime}</td>
+                    <td>${question.text}</td>
                 </tr>
             </#list>
         </table>

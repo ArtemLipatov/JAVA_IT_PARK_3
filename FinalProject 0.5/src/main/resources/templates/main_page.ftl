@@ -28,6 +28,7 @@
                 </div>
                 <div class="flex-cont">
                     <div class="article">
+
                         <a href="products/1" title="Мини-АТС LG Aria Soho">
                             <img src="img/aria-soho.jpg" alt="Мини-АТС LG Aria Soho" title="Мини-АТС LG Aria Soho">
                             <span>Мини-АТС LG Aria Soho</span>
@@ -35,10 +36,34 @@
                         <br>
                         <span>Мини-АТС LG Aria Soho (3 городские аналоговые линии  и 8 внутренних линий, расширяется до 12 х 48).</span>
                         <br>
+                        <div>
+
+                        </div>
                     </div>
                     </a>
                 </div>
+                </a>
+
+                </div>
+            <div class="flex-cont">
+                <div class="article">
+
+                    <a href="products/2" title="Мини-АТС LG Aria Soho">
+                        <img src="img/fish.jpg" alt="Лещ" title="Лещ-обыкновенный">
+                        <span>Лещ от Марселя</span>
+                    </a>
+                    <br>
+                    <span>Лещ от Марселя (шутки-шутками, а все к этому идет).</span>
+                    <br>
+                </div>
+                </a>
+            </div>
+            </a>
+
+        </div>
+
                 </aside>
+
             </div>
         </div>
     </div>

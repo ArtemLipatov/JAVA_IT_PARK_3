@@ -24,17 +24,17 @@ public class Product {
     @Enumerated(value = EnumType.STRING)
     private Category category;
 
-
     private String model;
     private String description;
     private String color;
+
     @Column(name="product_code")
     private String productCode;
     private double price;
     @Column(name = "image_path")
     private String imagePath;
 
-    @OneToMany
+    @OneToMany(mappedBy = "product")
     private List<Review> reviews;
 
 }

@@ -41,25 +41,22 @@
     <#else>
         <p><a href="/login">Войдите, чтобы написать отзыв</a></p>
     </#if>
-         <#if model.product.reviews??>
-             <#list model.product.reviews as review>
+    <#if model.product.reviews??>
+        <#list model.product.reviews as review>
         <hr>
-            <p>Отзыв оставил: ${review.user.name}<br>
-                Дата: ${review.reviewDateTime}<br>
-                 <#if model.user??>
-                     <#if review.userId.id == model.user.id>
+            <p>Отзыв оставил: ${review.users.email}<br>
+            <#if model.user??><#if review.users.id == model.user.id>
                     <a href="/edit_review?id=${review.id}">Редактировать</a>
-                    <form action="/delete_review?id=${review.id}" name="delete" method="post">
-                        <a href="#" onClick="parentNode.submit();">Удалить</a>
+                    <form action="/delete_review" id="form_delete${review.id}" name="delete" method="post">
+                        <input type="number" name="id" value="${review.id}" hidden>
+                        <a href="#" onClick="document.getElementById('form_delete${review.id}').submit();">Удалить</a>
                     </form>
-                 </#if>
-
-                 </#if>
+            </#if></#if>
                 ${review.text}</p>
-             </#list>
-         <#else>
+        </#list>
+    <#else>
         <p>Отзывов о данном товаре ещё не было.</p>
-         </#if>
+    </#if>
         <a href="/">Вернутся на главную страницу</a>
     </div>
 </div>

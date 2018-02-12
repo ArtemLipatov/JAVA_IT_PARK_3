@@ -30,7 +30,7 @@
                     <form id="form_input"
                           name="questionForm"
                           method="post"
-                          action="/question">
+                          action="/add_question">
                         <div>
                             <input type="text" name="name" placeholder="Имя"
                                    onclick="$(this).css ('border-color', '#ccc')">

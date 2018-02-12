@@ -27,8 +27,8 @@ public class ReviewServiceImpl implements ReviewService {
     public void addReview(ReviewForm form) {
         LocalDateTime reviewTime = LocalDateTime.now();
         Review review = Review.builder()
-                .productId(productsRepository.findOne(form.getProductId()))
-                .usersId(usersRepository.findOne(form.getUserId()))
+                .product(productsRepository.findOne(form.getProductId()))
+                .users(usersRepository.findOne(form.getUserId()))
                 .text(form.getText())
                 .reviewDateTime(reviewTime)
                 .build();
