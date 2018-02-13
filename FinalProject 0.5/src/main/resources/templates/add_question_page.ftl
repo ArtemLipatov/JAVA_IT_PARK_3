@@ -44,7 +44,7 @@
                                    onclick="$(this).css ('border-color', '#ccc')">
                         </div>
                         <div>
-                            <input type="text" name="phonenumber" placeholder="Номер телефона"
+                            <input type="number" name="phonenumber" placeholder="Номер телефона"
                                    onclick="$(this).css ('border-color', '#ccc')">
                         </div>
                         <input type="submit" class="btn" style="float: right" placeholder="Задать вопрос"/>

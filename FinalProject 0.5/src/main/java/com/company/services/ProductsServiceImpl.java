@@ -1,7 +1,6 @@
 package com.company.services;
 
 import com.company.forms.ProductForm;
-import com.company.models.Category;
 import com.company.models.Product;
 import com.company.repositories.ProductsRepository;
 import lombok.SneakyThrows;
@@ -18,9 +17,9 @@ public class ProductsServiceImpl implements ProductsService {
 
     @Override
     @SneakyThrows
-    public String addProduct(ProductForm form){
+    public void addProduct(ProductForm form){
         Product newProduct = Product.builder()
-                .category(Category.valueOf(form.getCategory()))
+                .category(form.getCategory())
                 .model(form.getModel())
                 .color(form.getColor())
                 .productCode(form.getProductCode())
@@ -30,7 +29,6 @@ public class ProductsServiceImpl implements ProductsService {
                 .build();
 
         productsRepository.save(newProduct);
-        return newProduct.getProductCode();
     }
 
 

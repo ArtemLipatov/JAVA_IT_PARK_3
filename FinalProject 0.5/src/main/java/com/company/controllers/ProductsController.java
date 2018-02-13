@@ -70,13 +70,11 @@ public class ProductsController {
         return ResponseEntity.ok(productsService.getProduct(productId));
     }
 
-    //тут явно ошибка
+
     @PostMapping("/add_product")
-    public String addProduct(@ModelAttribute ProductForm form,
-                                   @ModelAttribute("model") ModelMap model) {
-        String productCode = productsService.addProduct(form);
-        model.addAttribute("productCode", productCode);
-        return "products";
+    public String addProduct(ProductForm form){
+        productsService.addProduct(form);
+        return "redirect:/products?order_by=id";
     }
 
     @GetMapping("/add_product")

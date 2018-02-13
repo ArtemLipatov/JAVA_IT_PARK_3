@@ -17,7 +17,12 @@
     <div id="content">
 <#include 'common/header_logout.ftl'/>
 <#include 'common/nav.ftl'/>
-        <h1>Здравствуйте, ${model.user.name}</h1>
+    <if model.user.role == ADMIN||MODERATOR>
+        <form action="/add_product">
+            <button class="btn" style="float: left" placeholder="Добавить продукт">Добавить продукт</button>
+        </form>
+    </if>
+        <h1>Здравствуйте <#if model.user.name??>${model.user.name}</#if></h1>
         <h2>Введите или измените данные в профиле</h2>
     <p> ${model.user.email}</p>
     <p>Имя:  <#if model.user.firstName??>${model.user.firstName}</#if></p>

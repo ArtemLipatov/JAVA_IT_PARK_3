@@ -10,6 +10,6 @@ public interface ProductsService {
 
     Product getProduct(Long productId);
 
-    String addProduct(ProductForm form);
+    void addProduct(ProductForm form);
     void update(Long productId, ProductForm form);
 }

@@ -1,6 +1,6 @@
 package com.company.forms;
 
-import com.company.models.Category;
+
 import com.company.models.Product;
 import lombok.Data;
 
@@ -17,7 +17,7 @@ public class ProductForm {
 
 
     public void update(Product product){
-//        product.setCategory(this.category);
+        product.setCategory(this.category);
         product.setModel(this.model);
         product.setDescription(this.description);
         product.setColor(this.color);

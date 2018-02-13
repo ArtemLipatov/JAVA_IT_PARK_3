@@ -21,9 +21,8 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Enumerated(value = EnumType.STRING)
-    private Category category;
 
+    private String category;
     private String model;
     private String description;
     private String color;
