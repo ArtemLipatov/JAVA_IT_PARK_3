@@ -5,9 +5,9 @@
 <html>
 <head>
     <title>Главная</title>
-    <link rel="stylesheet" href="/css/A.main_style.css.pagespeed.cf.ckSp8gDoOX.css" type="text/css" charset="utf-8">
-    <link rel="stylesheet" href="/css/A.main_page_style.css.pagespeed.cf.42EpeVMWp4.css" type="text/css" charset="utf-8">
-    <link rel="stylesheet" href="/css/A.aside.css.pagespeed.cf.AcnkbKT635.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="/css/A.main_style.css.pagespeed.cf.ckSp8gDoOX.css">
+    <link rel="stylesheet" href="/css/A.main_page_style.css.pagespeed.cf.42EpeVMWp4.css">
+    <link rel="stylesheet" href="/css/A.aside.css.pagespeed.cf.AcnkbKT635.css">
     <link rel="stylesheet" href="/css/A.font-awesome.min.css.pagespeed.cf.YaV9IcR0kC.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
@@ -28,7 +28,6 @@
                 </div>
                 <div class="flex-cont">
                     <div class="article">
-
                         <a href="products/1" title="Мини-АТС LG Aria Soho">
                             <img src="img/aria-soho.jpg" alt="Мини-АТС LG Aria Soho" title="Мини-АТС LG Aria Soho">
                             <span>Мини-АТС LG Aria Soho</span>
@@ -36,37 +35,33 @@
                         <br>
                         <span>Мини-АТС LG Aria Soho (3 городские аналоговые линии  и 8 внутренних линий, расширяется до 12 х 48).</span>
                         <br>
-                        <div>
-
-                        </div>
                     </div>
-                    </a>
-                </div>
-                </a>
+                    <div class="article">
+                        <a href="products/2" title="Мини-АТС LG Aria Soho">
+                            <img src="img/fish.jpg" alt="Лещ" title="Лещ-обыкновенный">
+                            <span>Лещ от Марселя</span>
+                        </a>
+                        <br>
+                        <span>Лещ от Марселя (шутки-шутками, а все к этому идет).</span>
+                        <br>
+                    </div>
+                    <#list model.products as product>
+                        <div class="article">
+                            <a href="/products/${product.id}" title="${product.model}">
+                                <img src="${product.imagePath}" alt="picture" title="Лещ-обыкновенный">
+                                <span>${product.model}</span>
+                            </a>
+                            <br>
+                            <span>${product.description}</span>
+                            <br>
+                        </div>
+                    </#list>
 
                 </div>
-            <div class="flex-cont">
-                <div class="article">
-
-                    <a href="products/2" title="Мини-АТС LG Aria Soho">
-                        <img src="img/fish.jpg" alt="Лещ" title="Лещ-обыкновенный">
-                        <span>Лещ от Марселя</span>
-                    </a>
-                    <br>
-                    <span>Лещ от Марселя (шутки-шутками, а все к этому идет).</span>
-                    <br>
-                </div>
-                </a>
-            </div>
-            </a>
-
-        </div>
-
-                </aside>
-
             </div>
         </div>
     </div>
+</div>
 </div>
 </body>
 </html>

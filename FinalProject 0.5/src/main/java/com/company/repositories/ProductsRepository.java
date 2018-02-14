@@ -16,7 +16,4 @@ public interface ProductsRepository extends JpaRepository<Product, Long> {
     List<Product> findByOrderByPrice();
     List<Product> findByOrderByPriceDesc();
 
-
-
-
 }

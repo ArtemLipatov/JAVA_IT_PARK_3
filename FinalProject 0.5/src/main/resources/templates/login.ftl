@@ -29,41 +29,31 @@
                     <br>
                 </div>
                 <div class="block">
-                    <p id="textHint">Чтобы войти на сайт используйте ваш email и пароль, которые были указаны при регистрации на сайте</p>
-                    <#--<form id="form_input"-->
-                          <#--name="registrationForm"-->
-                          <#--method="post"-->
-                          <#--action="/login">-->
-                        <#--<br>-->
-                            <#--<input type="email" id="email" name="email" placeholder="Email.." onclick="$(this).css ('border-color', '#ccc')">-->
-                        <#--</br>-->
-                        <#--<br>-->
-                            <#--<input type="password" id="password" name="password" placeholder="Ваш пароль" onclick="$(this).css ('border-color', '#ccc')">-->
-                            <#--<input type="checkbox" name="remember-me">Запомнить-->
-                        <#--</br>-->
-                        <#--<div id="mess"></div>-->
-                        <#--<div>-->
-                            <#--<input id="send" class="btn" style="float: right" type="submit" placeholder="Войти"/>-->
-                        <#--</div>-->
-                    <#--</form>-->
-                    <form title="Вход"
-                    name="registrationForm"
-                    method="post"
-                    action="/login">
-                        <br>
-                        <input type="text" name="email" placeholder="Почта">
-                        <br>
-                        <input type="password" name="password" placeholder="Пароль">
-                        <br>
-                        <input type="checkbox" name="remember-me">Запомнить
-                        <br>
-                        <input type="submit" value="Войти">
+                    <p id="textHint">Чтобы войти на сайт используйте ваш email и пароль, которые были указаны при
+                        регистрации на сайте</p>
+                    <form id="form_input"
+                          name="registrationForm"
+                          method="post"
+                          action="/login">
+                        <div>
+                        <input type="email" id="email" name="email" placeholder="Email.."
+                               onclick="$(this).css ('border-color', '#ccc')">
+                        </div>
+                        <div>
+                        <input type="password" id="password" name="password" placeholder="Ваш пароль"
+                               onclick="$(this).css ('border-color', '#ccc')">
+                        </div>
+                            Запомнить <input type="checkbox" name="remember-me">
+                        <div>
+                            <input id="send" class="btn" style="float: right" type="submit" placeholder="Войти"/>
+                        </div>
                     </form>
+
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 </div>
 </body>
 </html>
