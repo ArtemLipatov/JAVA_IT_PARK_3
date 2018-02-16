@@ -27,28 +27,11 @@
                     <br>
                 </div>
                 <div class="flex-cont">
-                    <div class="article">
-                        <a href="products/1" title="Мини-АТС LG Aria Soho">
-                            <img src="img/aria-soho.jpg" alt="Мини-АТС LG Aria Soho" title="Мини-АТС LG Aria Soho">
-                            <span>Мини-АТС LG Aria Soho</span>
-                        </a>
-                        <br>
-                        <span>Мини-АТС LG Aria Soho (3 городские аналоговые линии  и 8 внутренних линий, расширяется до 12 х 48).</span>
-                        <br>
-                    </div>
-                    <div class="article">
-                        <a href="products/2" title="Мини-АТС LG Aria Soho">
-                            <img src="img/fish.jpg" alt="Лещ" title="Лещ-обыкновенный">
-                            <span>Лещ от Марселя</span>
-                        </a>
-                        <br>
-                        <span>Лещ от Марселя (шутки-шутками, а все к этому идет).</span>
-                        <br>
-                    </div>
+
                     <#list model.products as product>
                         <div class="article">
                             <a href="/products/${product.id}" title="${product.model}">
-                                <img src="${product.imagePath}" alt="picture" title="Лещ-обыкновенный">
+                                <img src="${product.imagePath}" alt="picture" height="200px" width="200px">
                                 <span>${product.model}</span>
                             </a>
                             <br>
@@ -67,7 +50,7 @@
                     <div style="clear: both"><br></div>
                     <div class="course">
                             <span class="title_course">Наш адрес: </span>
-                        <span>Ул. Пушкина д. Колотушкина</span>
+                        <span>Ул. Пушкина д.Колотушкина</span>
                     </div>
                     <div style="clear: both"><br></div>
                     <div class="course">

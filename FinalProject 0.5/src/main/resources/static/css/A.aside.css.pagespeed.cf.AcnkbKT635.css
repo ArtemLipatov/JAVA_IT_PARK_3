@@ -21,13 +21,7 @@ aside {
     font-size: 1.2em
 }
 
-.course>a>img {
-    border: 2px solid #dfdfdf;
-    border-radius: 5px;
-    width: 35%;
-    float: left;
-    margin-right: 10px
-}
+
 
 .course>a>.title_course {
     color: #646464
@@ -39,7 +33,7 @@ aside {
 }
 
 .course>span {
-    float: right;
+    float: left;
     font-weight: bold;
     color: rgba(236, 101, 80, 1)
 }

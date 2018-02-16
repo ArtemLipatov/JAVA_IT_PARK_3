@@ -30,6 +30,7 @@
             </tr>
 
             <#list model.products as product>
+            <a href="/products/${product.id}">
                 <tr>
                     <td>${product.productCode}</td>
                     <td>${product.category}</td>
@@ -38,6 +39,7 @@
                     <td>${product.color}</td>
                     <td>${product.price}</td>
                 </tr>
+            </a>
             </#list>
         </table>
     </div>

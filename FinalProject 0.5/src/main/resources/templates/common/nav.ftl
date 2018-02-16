@@ -4,9 +4,9 @@
         <a href="/" title="На главную страницу">
             <img src="img\logo.jpg" title="Название компании" alt="Логотип компании">
         </a>
-        <a href="/products?order_by=id">Все для СКС и Телефонии</a>
-        <a href="/products?order_by=id">АТС предприятия</a>
-        <a href="/products?order_by=id">Запись разговоров</a>
-        <a href="/products?order_by=id">Видеонаблюдение</a>
+        <a href="/products?order_by=id_sks">Все для СКС и Телефонии</a>
+        <a href="/products?order_by=id_ats">АТС предприятия</a>
+        <a href="/products?order_by=id_rec">Запись разговоров</a>
+        <a href="/products?order_by=id_video">Видеонаблюдение</a>
     </div>
 </nav>
