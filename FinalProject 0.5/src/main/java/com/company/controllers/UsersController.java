@@ -30,37 +30,18 @@ public class UsersController {
         model.addAttribute("user", user);
         return "profile";
     }
-    @PostMapping("/update_profile")
+    @PostMapping("/profile")
     @ResponseBody
-    public ResponseEntity<Object> updateUser(ProfileForm form,
-                                             @RequestParam(value = "id") Long id) {
-        service.update(id, form);
+    public ResponseEntity<Object> updateUser(ProfileForm form) {
+        service.update(form);
         return ResponseEntity.accepted().build();
     }
 
-    @GetMapping(value = "/users")
-    public String getUsers(@ModelAttribute("model")ModelMap model,
-                           @RequestParam("order_by") String orderBy){
-        List<User> users = service.getUsers(orderBy);
-        model.addAttribute("users", users);
-        return "users_page";
-    }
-
-    @GetMapping("/users/{user-id}")
-    public String getUserPage(@ModelAttribute("model") ModelMap model,
-                              @PathVariable("user-id") Long userId) {
-        User user = service.getUser(userId);
-        model.addAttribute("user", user);
-        return "user";
-    }
-
-    @PostMapping("/users/{user-id}")
-    @ResponseBody
-    public ResponseEntity<Object> updateUser(@PathVariable("user-id") Long userId,
-                                             ProfileForm form) {
-        service.update(userId, form);
-        return ResponseEntity.accepted().build();
-    }
-
-
+//    @GetMapping(value = "/update_profile")
+//    public String getUpdateProfilePage(@ModelAttribute("model")ModelMap model,
+//                                       Authentication authentication){
+//        User user = authenticationService.getUserByAuthentication(authentication);
+//        model.addAttribute("user", user);
+//        return "profile";
+//    }
 }

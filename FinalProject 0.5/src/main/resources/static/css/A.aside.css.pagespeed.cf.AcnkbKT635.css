@@ -3,6 +3,65 @@
     margin-top: 20px
 }
 
+aside {
+    float: left;
+    margin-top: 20px
+}
+
+#courses {
+    float: left;
+    width: 90%
+}
+
+.course {
+    width: 100%;
+    margin-bottom: 10px;
+    float: left;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em
+}
+
+.course>a>img {
+    border: 2px solid #dfdfdf;
+    border-radius: 5px;
+    width: 35%;
+    float: left;
+    margin-right: 10px
+}
+
+.course>a>.title_course {
+    color: #646464
+}
+
+.course>a:hover>.title_course {
+    color: #919191;
+    border-bottom: 1px solid silver
+}
+
+.course>span {
+    float: right;
+    font-weight: bold;
+    color: rgba(236, 101, 80, 1)
+}
+
+.course>a>span:last-child {
+    float: none
+}
+
+#courses>a>.btn {
+    float: left;
+    margin-left: 30%
+}
+
+#one_course {
+    float: left;
+    margin-top: 10px
+}
+
+#one_course>noindex>a>img {
+    width: 80%;
+    float: left
+}
 
 .heading {
     font-weight: lighter;
@@ -27,6 +86,10 @@
         width: 60%;
         margin-left: 3%
     }
+    aside {
+        width: 30%;
+        margin-left: 2%
+    }
     #news {
         margin-left: 10%;
         width: 90%
@@ -38,7 +101,9 @@
         width: 65%;
         margin-left: 2%
     }
-
+    aside {
+        width: 32%
+    }
     #news {
         margin-left: 4%;
         width: 96%
@@ -50,7 +115,10 @@
         width: 90%;
         margin-left: 5%
     }
-
+    aside {
+        width: 50%;
+        margin-left: 25%
+    }
     #news {
         margin-left: 4%;
         width: 96%
@@ -62,7 +130,10 @@
         width: 90%;
         margin-left: 5%
     }
-
+    aside {
+        width: 80%;
+        margin-left: 10%
+    }
     #news {
         margin-left: 4%;
         width: 96%
@@ -98,6 +169,56 @@
     }
 }
 
+#socialAside>.links>noindex>a {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    margin-left: 2%;
+    width: 40px;
+    height: 40px;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    border: 1px solid silver
+}
+
+#socialAside>.links .vk {
+    background: #4273aa;
+    color: #fff;
+    border-color: #1d436e
+}
+
+#socialAside>.links .fb {
+    background: #425fb4;
+    color: #fff;
+    border-color: #2244a6
+}
+
+#socialAside>.links .twitter {
+    background: #009df6;
+    color: #fff;
+    border-color: #007fc8
+}
+
+#socialAside>.links .yt {
+    background: red;
+    color: #fff;
+    border-color: #b10000
+}
+
+#socialAside>.links .telegram {
+    background: #00aef1;
+    color: #fff;
+    border-color: #0081b4
+}
+
+#socialAside>.links a:hover {
+    border-color: silver;
+    color: #494949;
+    background-color: rgba(235, 235, 235, 1)
+}
 
 .block_test {
     width: 90%;

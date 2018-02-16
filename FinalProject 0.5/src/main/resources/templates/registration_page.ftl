@@ -36,10 +36,6 @@
                             <input type="password" name="password" placeholder="Ваш пароль"
                                    onclick="$(this).css ('border-color', '#ccc')">
                         </div>
-                        <div>
-                            <input type="password" name="password2" placeholder="Повторите пароль"
-                                   onclick="$(this).css ('border-color', '#ccc')">
-                        </div>
                             <input type="submit" class="btn" style="float: right" placeholder="Зарегистрироваться"/>
                     </form>
                 </div>

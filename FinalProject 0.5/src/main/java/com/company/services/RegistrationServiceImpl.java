@@ -48,7 +48,7 @@ public class RegistrationServiceImpl implements RegistrationService {
                 .build();
         usersRepository.save(newUser);
 
-        String text = "<a href=\"http://localhost/confirm/" +newUser.getConfirmCode()+ "\">Пройдите по ссылке</a>";
+        String text = "<a href=\"http://localhost/confirm/" +newUser.getConfirmCode()+ "\">Для подтверждения регистрации пройдите по ссылке</a>";
 
         MimeMessage message = javaMailSender.createMimeMessage();
         message.setContent(text, "text/html");
@@ -56,6 +56,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         messageHelper.setTo(newUser.getEmail());
         messageHelper.setSubject("Подтверждение регистрации");
         messageHelper.setText(text, true);
+        messageHelper.setFrom("lipatov.project@gmail.com");
 
         javaMailSender.send(message);
 

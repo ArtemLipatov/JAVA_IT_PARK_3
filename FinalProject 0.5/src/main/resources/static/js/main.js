@@ -17,11 +17,12 @@ function uploadFile(file) {
     })
 }
 
-function updateProfile(firstName, lastName, organization, phonenumber) {
+function updateProfile(userId, firstName, lastName, organization, phonenumber) {
     $.ajax({
         type: "POST",
         url: "/users/${model.user.id}",
         data: {
+            "userId" : userId,
             "firstName" : firstName,
             "lastName" : lastName,
             "organization" : organization,

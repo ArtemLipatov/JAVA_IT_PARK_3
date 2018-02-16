@@ -17,24 +17,13 @@ public class UsersServiceImpl implements UsersService {
 
 
     @Override
-    public List<User> getUsers(String orderBy) {
-        switch (orderBy) {
-            case "registration_date": return usersRepository.findByOrderByRegistrationTime();
-            case "desc_registration_date": return usersRepository.findByOrderByRegistrationTimeDesc();
-            case "id": return usersRepository.findByOrderById();
-            case "desc_id": return usersRepository.findByOrderByIdDesc();
-            case "name": return usersRepository.findByOrderByName();
-        }
-        return usersRepository.findAll();
-    }
-    @Override
     public User getUser(Long userId) {
         return usersRepository.findOne(userId);
     }
 
     @Override
-    public void update(Long userId, ProfileForm form) {
-        User user = usersRepository.findOne(userId);
+    public void update(ProfileForm form) {
+        User user = usersRepository.findOne(form.getUserId());
         form.update(user);
         usersRepository.save(user);
     }

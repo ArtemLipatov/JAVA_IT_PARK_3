@@ -22,7 +22,7 @@
     <#include 'common/nav.ftl'/>
         <div id="main">
             <div id="news">
-                <h1 class="heading">Спецпредложения</h1>
+                <h1 class="heading">Мы предлагаем:</h1>
                 <div style="clear: both">
                     <br>
                 </div>
@@ -60,6 +60,28 @@
                 </div>
             </div>
         </div>
+        <aside>
+            <aside>
+                <div id="courses">
+                    <h2 class="heading">Контактные данные</h2>
+                    <div style="clear: both"><br></div>
+                    <div class="course">
+                            <span class="title_course">Наш адрес: </span>
+                        <span>Ул. Пушкина д. Колотушкина</span>
+                    </div>
+                    <div style="clear: both"><br></div>
+                    <div class="course">
+                            <span class="title_course">Помощь консультанта по телефону:</span>
+                        <span>8-800-555-35-35</span>
+                    </div>
+                    <div style="clear: both"><br></div>
+                    <div class="course">
+                            <span class="title_course">Наши консультанты:</span>
+                        <span>Иванов Иван Иванович(вн. 111)</span>
+                        <span>Петров Петр Петрович(вн. 222)</span>
+                    </div>
+                    <div style="clear: both"><br></div>
+        </aside>
     </div>
 </div>
 </div>
