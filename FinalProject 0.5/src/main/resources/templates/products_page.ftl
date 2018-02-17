@@ -27,6 +27,7 @@
                 <th>Описание</th>
                 <th>Цвет</th>
                 <th>Цена</th>
+                <th>Открыть</th>
             </tr>
 
             <#list model.products as product>
@@ -38,6 +39,7 @@
                     <td>${product.description}</td>
                     <td>${product.color}</td>
                     <td>${product.price}</td>
+                    <td><a href="/products/${product.id}">Подробнее</a></td>
                 </tr>
             </a>
             </#list>

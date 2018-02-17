@@ -3,10 +3,9 @@ package com.company.models;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = "bucket")
+@Table(name = "ordered")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -14,7 +13,7 @@ import java.util.List;
 @ToString
 @EqualsAndHashCode
 @Builder
-public class Bucket {
+public class Ordered {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,11 +21,12 @@ public class Bucket {
     @ManyToOne
     @JoinColumn(name = "users_id")
     private User user;
+
     @ManyToOne
     @JoinColumn(name = "product_id")
     private Product product;
+
     private Integer amount;
-
-
-
+    @Enumerated(value = EnumType.STRING)
+    private OrderStatus status;
 }

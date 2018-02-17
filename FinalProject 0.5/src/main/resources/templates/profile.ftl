@@ -53,11 +53,14 @@
     <#--</form>-->
         <div id="main">
             <div id="news">
-                <if model.user.role== ADMIN||MODERATOR>
+                    <if model.admin??>
                     <form action="/add_product">
                         <button class="btn" style="float: left" placeholder="Добавить продукт">Добавить продукт</button>
                     </form>
-                </if>
+                        <form action="/add_product">
+                            <button class="btn" style="float: left" placeholder="Добавить продукт">Добавить продукт</button>
+                        </form>
+                     </if>
                 <h2 class="heading">Здравствуйте <#if model.user.name??>${model.user.name}</#if></h2>
                 <div style="clear: both">
                     <br>

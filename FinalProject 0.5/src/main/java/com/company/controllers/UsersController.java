@@ -2,6 +2,7 @@ package com.company.controllers;
 
 
 import com.company.forms.ProfileForm;
+import com.company.models.Role;
 import com.company.models.User;
 import com.company.services.AuthenticationService;
 import com.company.services.UsersService;
@@ -27,9 +28,13 @@ public class UsersController {
     public String getProfilePage(@ModelAttribute("model")ModelMap model,
                                  Authentication authentication){
         User user = authenticationService.getUserByAuthentication(authentication);
+        if (user.getRole() == Role.ADMIN){
+            model.addAttribute("admin", "admin");
+        }
         model.addAttribute("user", user);
         return "profile";
     }
+
     @PostMapping("/profile")
     @ResponseBody
     public ResponseEntity<Object> updateUser(ProfileForm form) {
